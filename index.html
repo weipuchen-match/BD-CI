@@ -7,12 +7,194 @@
   <meta name="description" content="BNI 新北西B區 華榮分會 — 商務開發與企業形象組。完整引薦指南、會員檔案與三層引薦架構。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+:root{--bg-dark:#0a0b0f;--bg-card:#111318;--bg-card2:#161820;--bg-light:#f4f5f8;--bg-lcard:#ffffff;--accent:#6c63ff;--accent-2:#a78bfa;--accent-glow:rgba(108,99,255,.25);--green:#22c55e;--blue:#3b82f6;--orange:#f97316;--purple:#a855f7;--pink:#ec4899;--teal:#14b8a6;--red:#ef4444;--gray:#6b7280;--text-primary:#f1f2f6;--text-secondary:#9ca3af;--text-dark:#1a1c23;--text-dark-sec:#4b5563;--sidebar-w:260px;--radius:16px;--radius-sm:10px;--radius-xs:6px;--font:'Inter','Noto Sans TC',-apple-system,sans-serif;--font-display:'Outfit','Noto Sans TC',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font);background:var(--bg-dark);color:var(--text-primary);display:flex;min-height:100vh;overflow-x:hidden}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg-dark)}::-webkit-scrollbar-thumb{background:#2a2d3a;border-radius:3px}
+.sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;background:#0d0e14;border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;padding:24px 0;z-index:100;transition:transform .3s cubic-bezier(.4,0,.2,1);overflow-y:auto}
+.sidebar-logo{display:flex;align-items:center;gap:12px;padding:0 20px 24px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:20px}
+.logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:900;font-size:14px;letter-spacing:.5px;color:#fff;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column}
+.logo-chapter{font-size:12px;font-weight:700;color:var(--text-primary);line-height:1.4}
+.logo-sub{font-size:10px;color:var(--text-secondary);line-height:1.4}
+.nav-section-label{font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--text-secondary);padding:0 20px 8px;text-transform:uppercase}
+.nav-list{list-style:none;padding:0 10px}
+.nav-link{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:var(--radius-xs);font-size:12.5px;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:all .2s;margin-bottom:2px;line-height:1.3}
+.nav-text{display:flex;flex-direction:column;gap:1px}
+.nav-text .zh{font-size:12.5px;font-weight:600;color:inherit}
+.nav-text .en{font-size:10px;opacity:.65;font-weight:400}
+.nav-link:hover{color:var(--text-primary);background:rgba(255,255,255,.05)}
+.nav-link.active{color:var(--text-primary);background:rgba(108,99,255,.2)}
+.nav-icon{font-size:15px}
+.sidebar-footer{margin-top:auto;padding:20px;border-top:1px solid rgba(255,255,255,.06)}
+.sidebar-tag{font-size:11px;font-style:italic;color:var(--accent-2);opacity:.7}
+.hamburger{display:none;position:fixed;top:16px;left:16px;z-index:200;background:var(--bg-card);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px;cursor:pointer;flex-direction:column;gap:5px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text-primary);border-radius:2px;transition:all .3s}
+.main-content{margin-left:var(--sidebar-w);flex:1}
+.slide{min-height:100vh;padding:80px 60px;position:relative;background:var(--bg-dark)}
+.slide.slide-dark{background:var(--bg-card)}
+.slide-inner{max-width:1100px;margin:0 auto}
+.title-en{display:block;font-size:.65em;font-weight:500;color:var(--text-secondary);margin-top:6px;letter-spacing:.3px}
+.desc-en{font-size:.9em;opacity:.7;font-style:italic}
+.en{font-size:.85em;color:var(--text-secondary);font-style:italic}
+.hl-en{font-size:.75em;color:var(--text-secondary);font-weight:400;font-style:italic;margin-left:4px}
+.en-pain{font-size:.88em;opacity:.7;font-style:italic;display:block;margin-top:3px}
+.quote-en{display:block;margin-top:8px;font-size:.9em;opacity:.8}
+.slide-header{margin-bottom:48px}
+.slide-tag{display:inline-flex;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent-2);background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.3);padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.slide-title{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.15;color:var(--text-primary);margin-bottom:14px}
+.slide-title.sm{font-size:clamp(22px,3vw,34px)}
+.slide-desc{font-size:15px;color:var(--text-secondary);line-height:1.7;max-width:720px}
+#slide-cover{display:flex;align-items:center;justify-content:center;text-align:center;min-height:100vh;overflow:hidden;background:#050609}
+.cover-bg{position:absolute;inset:0;pointer-events:none}
+.cover-orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5}
+.cover-orb-1{width:600px;height:600px;background:radial-gradient(circle,#6c63ff55,transparent);top:-200px;left:-100px;animation:orb-float 8s ease-in-out infinite}
+.cover-orb-2{width:500px;height:500px;background:radial-gradient(circle,#a78bfa44,transparent);bottom:-150px;right:-50px;animation:orb-float 10s ease-in-out infinite reverse}
+.cover-orb-3{width:350px;height:350px;background:radial-gradient(circle,#14b8a633,transparent);top:40%;left:50%;transform:translate(-50%,-50%);animation:orb-pulse 6s ease-in-out infinite}
+@keyframes orb-float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-40px) scale(1.05)}}
+@keyframes orb-pulse{0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(1)}50%{opacity:.5;transform:translate(-50%,-50%) scale(1.15)}}
+.cover-content{position:relative;z-index:2;max-width:820px;padding:40px 20px}
+.cover-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-2);margin-bottom:28px;padding:6px 16px;background:rgba(108,99,255,.1);border:1px solid rgba(108,99,255,.25);border-radius:30px}
+.eyebrow-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.cover-title{font-family:var(--font-display);font-size:clamp(36px,6vw,72px);font-weight:900;line-height:1.08;color:var(--text-primary);margin-bottom:20px}
+.cover-title-sub{font-size:clamp(18px,3vw,36px);font-weight:700;color:var(--text-secondary);display:block}
+.cover-title-accent{background:linear-gradient(135deg,var(--accent),var(--accent-2),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cover-subtitle{font-size:17px;color:var(--text-secondary);margin-bottom:48px;font-weight:500;letter-spacing:.3px;line-height:1.7}
+.cover-subtitle-en{font-size:13px;opacity:.7;font-weight:400}
+.cover-stats{display:flex;align-items:center;justify-content:center;gap:32px;margin-bottom:48px}
+.cover-stat{text-align:center}
+.stat-num{display:block;font-family:var(--font-display);font-size:36px;font-weight:800;color:var(--text-primary);line-height:1}
+.stat-label{font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+.stat-divider{width:1px;height:48px;background:rgba(255,255,255,.1)}
+.cover-cta{display:inline-block;padding:16px 36px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-size:15px;font-weight:700;border-radius:50px;text-decoration:none;letter-spacing:.5px;transition:all .3s;box-shadow:0 8px 32px rgba(108,99,255,.4)}
+.cover-cta:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(108,99,255,.55)}
+.overview-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.member-card{background:var(--bg-card2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:22px 18px;text-decoration:none;color:inherit;transition:all .3s;cursor:pointer;position:relative;overflow:hidden}
+.member-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(108,99,255,.06),transparent);opacity:0;transition:opacity .3s}
+.member-card:hover{border-color:rgba(108,99,255,.3);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.member-card:hover::before{opacity:1}
+.mc-dimmed{opacity:.5;cursor:default}
+.mc-dimmed:hover{transform:none;box-shadow:none}
+.mc-number{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--text-secondary);margin-bottom:12px}
+.mc-avatar{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:16px;color:#fff;margin-bottom:14px;overflow:hidden}
+.mc-av-green{background:linear-gradient(135deg,#16a34a,#22c55e)}
+.mc-av-blue{background:linear-gradient(135deg,#1d4ed8,#3b82f6)}
+.mc-av-orange{background:linear-gradient(135deg,#c2410c,#f97316)}
+.mc-av-purple{background:linear-gradient(135deg,#7e22ce,#a855f7)}
+.mc-av-pink{background:linear-gradient(135deg,#be185d,#ec4899)}
+.mc-av-teal{background:linear-gradient(135deg,#0f766e,#14b8a6)}
+.mc-av-red{background:linear-gradient(135deg,#b91c1c,#ef4444)}
+.mc-av-gray{background:linear-gradient(135deg,#374151,#6b7280)}
+.mc-avatar.has-photo{background:none !important;font-size:0}
+.mc-avatar.has-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:14px}
+.mc-name{font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:3px;line-height:1.4}
+.mc-name-en{display:block;font-size:11px;font-weight:500;color:var(--text-secondary);margin-top:1px}
+.mc-role{font-size:11.5px;color:var(--text-secondary);margin-bottom:4px;line-height:1.4}
+.mc-company{font-size:11px;color:var(--accent-2);margin-bottom:10px}
+.mc-tag{font-size:10.5px;color:var(--text-secondary);padding:4px 8px;background:rgba(255,255,255,.04);border-radius:var(--radius-xs);border:1px solid rgba(255,255,255,.06)}
+.matrix-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.matrix-card{background:var(--bg-lcard);border-radius:var(--radius);padding:24px;border:1px solid rgba(0,0,0,.07);transition:all .3s;position:relative;overflow:hidden}
+.matrix-card::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--accent),var(--accent-2))}
+.matrix-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,.12)}
+.mx-trigger{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+.mx-icon{font-size:26px;line-height:1;flex-shrink:0}
+.mx-trigger-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-dark-sec);margin-bottom:4px}
+.mx-trigger-type{font-size:15px;font-weight:700;color:var(--text-dark);line-height:1.3}
+.mx-pain{font-size:12.5px;color:var(--text-dark-sec);background:#f8f9ff;border-radius:var(--radius-xs);padding:8px 12px;margin-bottom:12px;line-height:1.5}
+.mx-pain-label{font-weight:700;color:#d97706;margin-right:4px}
+.mx-refer{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-dark);margin-bottom:12px}
+.mx-refer strong{color:var(--accent)}
+.mx-refer-badge{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;padding:3px 8px;border-radius:4px;flex-shrink:0}
+.mx-hook{font-size:12px;color:var(--text-dark-sec);background:linear-gradient(135deg,#f0f2ff,#fdf4ff);border-left:3px solid var(--accent);padding:10px 12px;border-radius:0 var(--radius-xs) var(--radius-xs) 0;line-height:1.6}
+.hook-label{font-weight:700;color:var(--accent);margin-right:4px}
+.cheat-table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid rgba(255,255,255,.07)}
+.cheat-table{width:100%;border-collapse:collapse;font-size:13px}
+.cheat-table thead tr{background:rgba(108,99,255,.12)}
+.cheat-table th{padding:16px 20px;text-align:left;font-size:12px;font-weight:700;letter-spacing:.5px;color:var(--accent-2);white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.07)}
+.th-sub{display:block;font-size:10.5px;font-weight:500;color:var(--text-secondary);margin-top:2px;white-space:normal}
+.cheat-table tbody tr{border-bottom:1px solid rgba(255,255,255,.05);transition:background .2s}
+.cheat-table tbody tr:hover{background:rgba(255,255,255,.03)}
+.cheat-table tbody tr:last-child{border-bottom:none}
+.cheat-table td{padding:18px 20px;vertical-align:top;color:var(--text-secondary);line-height:1.6}
+.col-member{width:200px;min-width:180px}
+.col-ask,.col-give{min-width:260px}
+.ct-badge{display:inline-block;font-size:10px;font-weight:800;padding:2px 7px;border-radius:4px;color:#fff;margin-bottom:6px}
+.ct-green{background:var(--green)}.ct-blue{background:var(--blue)}.ct-orange{background:var(--orange)}.ct-purple{background:var(--purple)}.ct-pink{background:var(--pink)}.ct-teal{background:var(--teal)}.ct-red{background:var(--red)}
+.col-member strong{display:block;font-size:14px;color:var(--text-primary);font-weight:700}
+.ct-role{font-size:11.5px;color:var(--text-secondary);margin-top:2px}
+.ct-photo-wrap{margin:8px 0}
+.ct-avatar{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#fff;overflow:hidden}
+.ct-av-green{background:linear-gradient(135deg,#16a34a,#22c55e)}.ct-av-blue{background:linear-gradient(135deg,#1d4ed8,#3b82f6)}.ct-av-orange{background:linear-gradient(135deg,#c2410c,#f97316)}.ct-av-purple{background:linear-gradient(135deg,#7e22ce,#a855f7)}.ct-av-pink{background:linear-gradient(135deg,#be185d,#ec4899)}.ct-av-teal{background:linear-gradient(135deg,#0f766e,#14b8a6)}.ct-av-red{background:linear-gradient(135deg,#b91c1c,#ef4444)}
+.ct-avatar.has-photo{background:none !important;font-size:0}
+.ct-avatar.has-photo img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:12px}
+.cheat-table ul{list-style:none;padding:0}
+.cheat-table ul li{font-size:12.5px;color:var(--text-secondary);padding:4px 0;display:flex;align-items:baseline;gap:6px}
+.cheat-table ul li::before{content:'•';color:var(--accent-2);font-size:14px;flex-shrink:0}
+.target-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.target-card{background:var(--bg-lcard);border-radius:var(--radius);padding:28px 22px;border:1px solid rgba(0,0,0,.07);transition:all .3s;position:relative;overflow:hidden}
+.target-card:hover{transform:translateY(-5px);box-shadow:0 20px 60px rgba(108,99,255,.12);border-color:rgba(108,99,255,.25)}
+.tg-icon{font-size:32px;margin-bottom:12px;display:block}
+.tg-num{font-size:11px;font-weight:800;letter-spacing:1.5px;color:var(--accent);margin-bottom:8px}
+.tg-title{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:10px;line-height:1.3}
+.tg-desc{font-size:12.5px;color:var(--text-dark-sec);line-height:1.6}
+.profile-layout{display:grid;grid-template-columns:280px 1fr;gap:60px;align-items:start}
+.profile-left{position:sticky;top:40px}
+.profile-number{font-size:11px;font-weight:800;letter-spacing:2px;color:var(--text-secondary);margin-bottom:16px}
+.profile-photo-wrap{margin-bottom:18px}
+.profile-avatar{width:110px;height:110px;border-radius:22px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:900;font-size:32px;color:#fff;box-shadow:0 12px 40px rgba(0,0,0,.3);transition:all .3s;overflow:hidden}
+.profile-avatar.has-photo{background:none !important;font-size:0}
+.profile-avatar.has-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:22px}
+.pav-green{background:linear-gradient(135deg,#16a34a,#22c55e)}.pav-blue{background:linear-gradient(135deg,#1d4ed8,#3b82f6)}.pav-orange{background:linear-gradient(135deg,#c2410c,#f97316)}.pav-purple{background:linear-gradient(135deg,#7e22ce,#a855f7)}.pav-pink{background:linear-gradient(135deg,#be185d,#ec4899)}.pav-teal{background:linear-gradient(135deg,#0f766e,#14b8a6)}.pav-red{background:linear-gradient(135deg,#b91c1c,#ef4444)}
+.profile-name{font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--text-primary);margin-bottom:4px;line-height:1.3}
+.profile-name-en{display:block;font-size:13px;font-weight:500;color:var(--text-secondary);margin-top:2px}
+.profile-role{font-size:13px;font-weight:600;color:var(--accent-2);margin-bottom:6px;line-height:1.4}
+.profile-company{font-size:12px;color:var(--text-secondary);margin-bottom:20px}
+.profile-contact{margin-bottom:20px}
+.contact-item{font-size:12px;color:var(--text-secondary);margin-bottom:5px}
+.clients-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);margin-bottom:8px}
+.client-tags{display:flex;flex-wrap:wrap;gap:6px}
+.client-tags span{font-size:11px;font-weight:600;color:var(--text-primary);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:3px 8px}
+.profile-tagline{font-size:16px;color:var(--text-secondary);line-height:1.65;margin-bottom:32px;border-left:3px solid var(--accent);padding-left:16px}
+.profile-highlights{margin-bottom:32px}
+.highlight-item{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.highlight-item:last-child{border-bottom:none}
+.hi-icon{font-size:22px;flex-shrink:0;margin-top:1px}
+.highlight-item strong{display:block;font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:5px}
+.highlight-item p{font-size:13px;color:var(--text-secondary);line-height:1.65}
+.profile-quote{background:rgba(108,99,255,.08);border:1px solid rgba(108,99,255,.2);border-left:4px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 20px;font-size:13.5px;color:var(--accent-2);font-style:italic;line-height:1.7;margin-bottom:28px}
+.tier-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:22px}
+.tier-title{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);margin-bottom:16px}
+.tier-row{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05);align-items:flex-start}
+.tier-row:last-child{border-bottom:none;padding-bottom:0}
+.tier-badge{font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:3px 10px;border-radius:4px;flex-shrink:0;white-space:nowrap;margin-top:1px}
+.tier-general{background:rgba(34,197,94,.15);color:#22c55e;border:1px solid rgba(34,197,94,.3)}
+.tier-ideal{background:rgba(59,130,246,.15);color:#60a5fa;border:1px solid rgba(59,130,246,.3)}
+.tier-dream{background:rgba(168,85,247,.15);color:#c084fc;border:1px solid rgba(168,85,247,.3)}
+.tier-text{font-size:12.5px;color:var(--text-secondary);line-height:1.6}
+.owned-brands{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:20px 22px;margin-bottom:24px}
+.ob-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);margin-bottom:14px}
+.ob-list{display:flex;flex-direction:column;gap:10px}
+.ob-item{display:flex;gap:10px;font-size:12.5px;color:var(--text-secondary);align-items:flex-start}
+.ob-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.ob-item strong{color:var(--text-primary)}
+.progress-bar{position:fixed;bottom:0;left:var(--sidebar-w);right:0;height:3px;background:rgba(255,255,255,.06);z-index:50}
+.progress-bar::after{content:'';display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:var(--progress,0%);transition:width .2s}
+.scroll-top{position:fixed;bottom:32px;right:32px;width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-size:18px;font-weight:700;border:none;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(108,99,255,.4);transition:all .3s;opacity:0;transform:translateY(16px);pointer-events:none;z-index:90}
+.scroll-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.scroll-top:hover{transform:translateY(-3px)}
+@keyframes fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.slide{animation:fade-up .5s ease both}
+@media(max-width:1200px){.overview-grid{grid-template-columns:repeat(3,1fr)}.target-grid{grid-template-columns:repeat(3,1fr)}.matrix-grid{grid-template-columns:1fr}}
+@media(max-width:900px){:root{--sidebar-w:0px}.sidebar{transform:translateX(-260px);width:260px}.sidebar.open{transform:translateX(0)}.hamburger{display:flex}.main-content{margin-left:0}.slide{padding:70px 24px 60px}.profile-layout{grid-template-columns:1fr}.profile-left{position:static}.overview-grid{grid-template-columns:repeat(2,1fr)}.target-grid{grid-template-columns:repeat(2,1fr)}.cover-stats{flex-direction:column;gap:20px}.stat-divider{width:48px;height:1px}.progress-bar{left:0}}
+@media(max-width:600px){.overview-grid{grid-template-columns:1fr}.target-grid{grid-template-columns:1fr}.cover-title{font-size:32px}}
+</style>
 </head>
 <body>
 
-  <!-- ═══════════════════════════════ SIDEBAR NAV ═══════════════════════════════ -->
   <nav class="sidebar" id="sidebar">
     <div class="sidebar-logo">
       <div class="logo-mark">BNI</div>
@@ -21,1132 +203,340 @@
         <span class="logo-sub">新北西B區 · New Taipei West B</span>
       </div>
     </div>
-
     <div class="nav-section-label">導覽 NAVIGATION</div>
     <ul class="nav-list">
-      <li><a href="#slide-cover"    class="nav-link active" data-slide="0">
-        <span class="nav-icon">🏠</span>
-        <span class="nav-text"><span class="zh">封面</span><span class="en">Cover</span></span>
-      </a></li>
-      <li><a href="#slide-overview" class="nav-link" data-slide="1">
-        <span class="nav-icon">👥</span>
-        <span class="nav-text"><span class="zh">團隊總覽</span><span class="en">Team Overview</span></span>
-      </a></li>
-      <li><a href="#slide-matrix"   class="nav-link" data-slide="2">
-        <span class="nav-icon">⚡</span>
-        <span class="nav-text"><span class="zh">引薦速查</span><span class="en">Referral Matrix</span></span>
-      </a></li>
-      <li><a href="#slide-cheat"    class="nav-link" data-slide="3">
-        <span class="nav-icon">📋</span>
-        <span class="nav-text"><span class="zh">需求對照表</span><span class="en">Asks &amp; Gives</span></span>
-      </a></li>
-      <li><a href="#slide-targets"  class="nav-link" data-slide="4">
-        <span class="nav-icon">🎯</span>
-        <span class="nav-text"><span class="zh">目標市場</span><span class="en">Target Markets</span></span>
-      </a></li>
+      <li><a href="#slide-cover" class="nav-link active"><span class="nav-icon">🏠</span><span class="nav-text"><span class="zh">封面</span><span class="en">Cover</span></span></a></li>
+      <li><a href="#slide-overview" class="nav-link"><span class="nav-icon">👥</span><span class="nav-text"><span class="zh">團隊總覽</span><span class="en">Team Overview</span></span></a></li>
+      <li><a href="#slide-matrix" class="nav-link"><span class="nav-icon">⚡</span><span class="nav-text"><span class="zh">引薦速查</span><span class="en">Referral Matrix</span></span></a></li>
+      <li><a href="#slide-cheat" class="nav-link"><span class="nav-icon">📋</span><span class="nav-text"><span class="zh">需求對照表</span><span class="en">Asks &amp; Gives</span></span></a></li>
+      <li><a href="#slide-targets" class="nav-link"><span class="nav-icon">🎯</span><span class="nav-text"><span class="zh">目標市場</span><span class="en">Target Markets</span></span></a></li>
     </ul>
-
     <div class="nav-section-label" style="margin-top:28px;">會員檔案 PROFILES</div>
     <ul class="nav-list">
-      <li><a href="#slide-patrick"  class="nav-link" data-slide="5">
-        <span class="nav-icon">🤖</span>
-        <span class="nav-text"><span class="zh">魏溥辰</span><span class="en">Patrick Wei</span></span>
-      </a></li>
-      <li><a href="#slide-jiajun"   class="nav-link" data-slide="6">
-        <span class="nav-icon">🎬</span>
-        <span class="nav-text"><span class="zh">張嘉峻</span><span class="en">Jia-Jun Zhang</span></span>
-      </a></li>
-      <li><a href="#slide-mason"    class="nav-link" data-slide="7">
-        <span class="nav-icon">🛒</span>
-        <span class="nav-text"><span class="zh">江緯達</span><span class="en">Mason Jiang</span></span>
-      </a></li>
-      <li><a href="#slide-terry"    class="nav-link" data-slide="8">
-        <span class="nav-icon">🧭</span>
-        <span class="nav-text"><span class="zh">謝小涵</span><span class="en">Terry Hsieh</span></span>
-      </a></li>
-      <li><a href="#slide-sage"     class="nav-link" data-slide="9">
-        <span class="nav-icon">🎨</span>
-        <span class="nav-text"><span class="zh">黃湍晏</span><span class="en">Sage Huang</span></span>
-      </a></li>
-      <li><a href="#slide-show"     class="nav-link" data-slide="10">
-        <span class="nav-icon">📺</span>
-        <span class="nav-text"><span class="zh">巫秀陽</span><span class="en">Show Wu</span></span>
-      </a></li>
-      <li><a href="#slide-fei"      class="nav-link" data-slide="11">
-        <span class="nav-icon">📷</span>
-        <span class="nav-text"><span class="zh">林家榆</span><span class="en">Fei Lin</span></span>
-      </a></li>
+      <li><a href="#slide-patrick" class="nav-link"><span class="nav-icon">🤖</span><span class="nav-text"><span class="zh">魏溥辰</span><span class="en">Patrick Wei</span></span></a></li>
+      <li><a href="#slide-jiajun" class="nav-link"><span class="nav-icon">🎬</span><span class="nav-text"><span class="zh">張嘉峻</span><span class="en">Jia-Jun Zhang</span></span></a></li>
+      <li><a href="#slide-mason" class="nav-link"><span class="nav-icon">🛒</span><span class="nav-text"><span class="zh">江緯達</span><span class="en">Mason Jiang</span></span></a></li>
+      <li><a href="#slide-terry" class="nav-link"><span class="nav-icon">🧭</span><span class="nav-text"><span class="zh">謝小涵</span><span class="en">Terry Hsieh</span></span></a></li>
+      <li><a href="#slide-sage" class="nav-link"><span class="nav-icon">🎨</span><span class="nav-text"><span class="zh">黃湍晏</span><span class="en">Sage Huang</span></span></a></li>
+      <li><a href="#slide-show" class="nav-link"><span class="nav-icon">📺</span><span class="nav-text"><span class="zh">巫秀陽</span><span class="en">Show Wu</span></span></a></li>
+      <li><a href="#slide-fei" class="nav-link"><span class="nav-icon">📷</span><span class="nav-text"><span class="zh">林家榆</span><span class="en">Fei Lin</span></span></a></li>
     </ul>
-
-    <div class="sidebar-footer">
-      <div class="sidebar-tag">Givers Gain® · 付出者得到®</div>
-    </div>
+    <div class="sidebar-footer"><div class="sidebar-tag">Givers Gain® · 付出者得到®</div></div>
   </nav>
 
-  <!-- Hamburger -->
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
 
-  <!-- ═══════════════════════════════ MAIN CONTENT ═══════════════════════════════ -->
   <main class="main-content" id="mainContent">
 
-    <!-- ─── SLIDE 0: COVER ─── -->
+    <!-- COVER -->
     <section class="slide" id="slide-cover">
-      <div class="cover-bg">
-        <div class="cover-orb cover-orb-1"></div>
-        <div class="cover-orb cover-orb-2"></div>
-        <div class="cover-orb cover-orb-3"></div>
-      </div>
+      <div class="cover-bg"><div class="cover-orb cover-orb-1"></div><div class="cover-orb cover-orb-2"></div><div class="cover-orb cover-orb-3"></div></div>
       <div class="cover-content">
-        <div class="cover-eyebrow">
-          <span class="eyebrow-dot"></span>
-          BNI 新北西B區 New Taipei West B District · 華榮分會 Huarong Chapter
-        </div>
+        <div class="cover-eyebrow"><span class="eyebrow-dot"></span>BNI 新北西B區 · 華榮分會 Huarong Chapter</div>
         <h1 class="cover-title">
-          商務開發與企業形象組<br />
-          <span class="cover-title-sub">Business Development &amp;<br />Corporate Image</span>
+          商務開發與企業形象組<br/>
+          <span class="cover-title-sub">Business Development &amp; Corporate Image</span>
           <span class="cover-title-accent"> Team</span>
         </h1>
-        <p class="cover-subtitle">
-          7 位專業會員 · 7 大產業 · 一個引薦網絡<br />
-          <span class="cover-subtitle-en">7 Expert Members · 7 Industries · One Referral Network</span>
-        </p>
+        <p class="cover-subtitle">7 位專業會員 · 7 大產業 · 一個引薦網絡<br/><span class="cover-subtitle-en">7 Expert Members · 7 Industries · One Referral Network</span></p>
         <div class="cover-stats">
-          <div class="cover-stat">
-            <span class="stat-num">7</span>
-            <span class="stat-label">會員 Members</span>
-          </div>
+          <div class="cover-stat"><span class="stat-num">7</span><span class="stat-label">會員 Members</span></div>
           <div class="stat-divider"></div>
-          <div class="cover-stat">
-            <span class="stat-num">3層</span>
-            <span class="stat-label">引薦架構 Tiers</span>
-          </div>
+          <div class="cover-stat"><span class="stat-num">3層</span><span class="stat-label">引薦架構 Tiers</span></div>
           <div class="stat-divider"></div>
-          <div class="cover-stat">
-            <span class="stat-num">7</span>
-            <span class="stat-label">目標市場 Markets</span>
-          </div>
+          <div class="cover-stat"><span class="stat-num">7</span><span class="stat-label">目標市場 Markets</span></div>
         </div>
-        <a href="#slide-overview" class="cover-cta" id="startBtn">
-          探索團隊 Explore the Team →
-        </a>
+        <a href="#slide-overview" class="cover-cta" id="startBtn">探索團隊 Explore the Team →</a>
       </div>
     </section>
 
-    <!-- ─── SLIDE 1: TEAM OVERVIEW ─── -->
+    <!-- TEAM OVERVIEW -->
     <section class="slide slide-dark" id="slide-overview">
       <div class="slide-inner">
         <div class="slide-header">
           <div class="slide-tag">01 · 團隊總覽 TEAM OVERVIEW</div>
-          <h2 class="slide-title">認識我們的團隊<br /><span class="title-en">Meet the Team</span></h2>
-          <p class="slide-desc">八位專業會員，覆蓋從品牌策略、視覺設計、影音製作、商業攝影、通路導客到 AI 商務媒合的完整服務鏈。<br/><span class="desc-en">Eight specialists covering the full brand-to-revenue pipeline — from strategy and design to video, photography, lead-gen, and AI-powered business matching.</span></p>
+          <h2 class="slide-title">認識我們的團隊<span class="title-en">Meet the Team</span></h2>
+          <p class="slide-desc">八位專業會員，覆蓋從品牌策略、視覺設計、影音製作、商業攝影、通路導客到 AI 商務媒合的完整服務鏈。<br/><span class="desc-en">Eight specialists covering the full brand-to-revenue pipeline.</span></p>
         </div>
-
         <div class="overview-grid">
-          <a href="#slide-patrick" class="member-card" id="oc-patrick">
-            <div class="mc-number">#284</div>
-            <!-- PHOTO SLOT: replace mc-avatar with mc-photo when photo is provided -->
-            <div class="mc-avatar mc-av-green" data-member="patrick">PW</div>
-            <div class="mc-name">魏溥辰 <span class="mc-name-en">Patrick Wei</span></div>
-            <div class="mc-role">AI 商務媒合引擎<br/><span class="en">AI Business Matching</span></div>
-            <div class="mc-company">Matchverse.ai</div>
-            <div class="mc-tag">🤖 AI · 會展 Expo · 媒合</div>
-          </a>
-          <a href="#slide-jiajun" class="member-card" id="oc-jiajun">
-            <div class="mc-number">#011</div>
-            <div class="mc-avatar mc-av-blue" data-member="jiajun">JZ</div>
-            <div class="mc-name">張嘉峻 <span class="mc-name-en">Jia-Jun Zhang</span></div>
-            <div class="mc-role">訪談影片製作<br/><span class="en">Interview Video Production</span></div>
-            <div class="mc-company">A+2 Video Production</div>
-            <div class="mc-tag">🎬 影片 Video · 品牌 Brand</div>
-          </a>
-          <a href="#slide-mason" class="member-card" id="oc-mason">
-            <div class="mc-number">#115</div>
-            <div class="mc-avatar mc-av-orange" data-member="mason">MJ</div>
-            <div class="mc-name">江緯達 <span class="mc-name-en">Mason Jiang</span></div>
-            <div class="mc-role">品牌導客<br/><span class="en">Brand Lead Generation</span></div>
-            <div class="mc-company">GS Marketing 精實國際</div>
-            <div class="mc-tag">🛒 團購 · 1,000+ KOLs</div>
-          </a>
-          <a href="#slide-terry" class="member-card" id="oc-terry">
-            <div class="mc-number">#186</div>
-            <div class="mc-avatar mc-av-purple" data-member="terry">TH</div>
-            <div class="mc-name">謝小涵 <span class="mc-name-en">Terry Hsieh</span></div>
-            <div class="mc-role">品牌策略顧問<br/><span class="en">Brand Strategy Consulting</span></div>
-            <div class="mc-company">TSG 特里創意</div>
-            <div class="mc-tag">🧭 策略 · 中大企業 SME</div>
-          </a>
-          <a href="#slide-sage" class="member-card" id="oc-sage">
-            <div class="mc-number">#216</div>
-            <div class="mc-avatar mc-av-pink" data-member="sage">SH</div>
-            <div class="mc-name">黃湍晏 <span class="mc-name-en">Sage Huang</span></div>
-            <div class="mc-role">企業形象設計<br/><span class="en">Corporate VI Design</span></div>
-            <div class="mc-company">SEAN 藝術設計</div>
-            <div class="mc-tag">🎨 LOGO · VI · 動態設計</div>
-          </a>
-          <a href="#slide-show" class="member-card" id="oc-show">
-            <div class="mc-number">#226</div>
-            <div class="mc-avatar mc-av-teal" data-member="show">SW</div>
-            <div class="mc-name">巫秀陽 <span class="mc-name-en">Show Wu</span></div>
-            <div class="mc-role">企業影音 IP 培訓<br/><span class="en">Corporate Video IP Training</span></div>
-            <div class="mc-company">老巫翻新 Laowu514</div>
-            <div class="mc-tag">📺 金鐘獎 · 百萬粉絲</div>
-          </a>
-          <a href="#slide-fei" class="member-card" id="oc-fei">
-            <div class="mc-number">#278</div>
-            <div class="mc-avatar mc-av-red" data-member="fei">FL</div>
-            <div class="mc-name">林家榆 <span class="mc-name-en">Fei Lin</span></div>
-            <div class="mc-role">商業攝影<br/><span class="en">Commercial Photography</span></div>
-            <div class="mc-company">FEIFOTO Studio</div>
-            <div class="mc-tag">📷 Nike · Adidas · 藝人</div>
-          </a>
-          <div class="member-card mc-dimmed" id="oc-kunyi">
-            <div class="mc-number">#290</div>
-            <div class="mc-avatar mc-av-gray" data-member="kunyi">KY</div>
-            <div class="mc-name">李坤益 <span class="mc-name-en">Kun-Yi Lee</span></div>
-            <div class="mc-role">人資政府補助<br/><span class="en">HR &amp; Gov. Subsidy</span></div>
-            <div class="mc-company">—</div>
-            <div class="mc-tag">🏛️ 人資 HR · 政府補助</div>
-          </div>
+          <a href="#slide-patrick" class="member-card" id="oc-patrick"><div class="mc-number">#284</div><div class="mc-avatar mc-av-green" data-member="patrick">PW</div><div class="mc-name">魏溥辰 <span class="mc-name-en">Patrick Wei</span></div><div class="mc-role">AI 商務媒合引擎<br/><span class="en">AI Business Matching</span></div><div class="mc-company">Matchverse.ai</div><div class="mc-tag">🤖 AI · 會展 Expo · 媒合</div></a>
+          <a href="#slide-jiajun" class="member-card" id="oc-jiajun"><div class="mc-number">#011</div><div class="mc-avatar mc-av-blue" data-member="jiajun">JZ</div><div class="mc-name">張嘉峻 <span class="mc-name-en">Jia-Jun Zhang</span></div><div class="mc-role">訪談影片製作<br/><span class="en">Interview Video Production</span></div><div class="mc-company">A+2 Video Production</div><div class="mc-tag">🎬 影片 Video · 品牌 Brand</div></a>
+          <a href="#slide-mason" class="member-card" id="oc-mason"><div class="mc-number">#115</div><div class="mc-avatar mc-av-orange" data-member="mason">MJ</div><div class="mc-name">江緯達 <span class="mc-name-en">Mason Jiang</span></div><div class="mc-role">品牌導客<br/><span class="en">Brand Lead Generation</span></div><div class="mc-company">GS Marketing 精實國際</div><div class="mc-tag">🛒 團購 · 1,000+ KOLs</div></a>
+          <a href="#slide-terry" class="member-card" id="oc-terry"><div class="mc-number">#186</div><div class="mc-avatar mc-av-purple" data-member="terry">TH</div><div class="mc-name">謝小涵 <span class="mc-name-en">Terry Hsieh</span></div><div class="mc-role">品牌策略顧問<br/><span class="en">Brand Strategy Consulting</span></div><div class="mc-company">TSG 特里創意</div><div class="mc-tag">🧭 策略 · 中大企業 SME</div></a>
+          <a href="#slide-sage" class="member-card" id="oc-sage"><div class="mc-number">#216</div><div class="mc-avatar mc-av-pink" data-member="sage">SH</div><div class="mc-name">黃湍晏 <span class="mc-name-en">Sage Huang</span></div><div class="mc-role">企業形象設計<br/><span class="en">Corporate VI Design</span></div><div class="mc-company">SEAN 藝術設計</div><div class="mc-tag">🎨 LOGO · VI · 動態設計</div></a>
+          <a href="#slide-show" class="member-card" id="oc-show"><div class="mc-number">#226</div><div class="mc-avatar mc-av-teal" data-member="show">SW</div><div class="mc-name">巫秀陽 <span class="mc-name-en">Show Wu</span></div><div class="mc-role">企業影音 IP 培訓<br/><span class="en">Corporate Video IP Training</span></div><div class="mc-company">老巫翻新 Laowu514</div><div class="mc-tag">📺 金鐘獎 · 百萬粉絲</div></a>
+          <a href="#slide-fei" class="member-card" id="oc-fei"><div class="mc-number">#278</div><div class="mc-avatar mc-av-red" data-member="fei">FL</div><div class="mc-name">林家榆 <span class="mc-name-en">Fei Lin</span></div><div class="mc-role">商業攝影<br/><span class="en">Commercial Photography</span></div><div class="mc-company">FEIFOTO Studio</div><div class="mc-tag">📷 Nike · Adidas · 藝人</div></a>
+          <div class="member-card mc-dimmed"><div class="mc-number">#290</div><div class="mc-avatar mc-av-gray">KY</div><div class="mc-name">李坤益 <span class="mc-name-en">Kun-Yi Lee</span></div><div class="mc-role">人資政府補助<br/><span class="en">HR &amp; Gov. Subsidy</span></div><div class="mc-company">—</div><div class="mc-tag">🏛️ 人資 HR · 政府補助</div></div>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 2: REFERRAL MATRIX ─── -->
+    <!-- REFERRAL MATRIX -->
     <section class="slide" id="slide-matrix">
       <div class="slide-inner">
         <div class="slide-header">
           <div class="slide-tag">02 · 引薦速查 REFERRAL MATRIX</div>
-          <h2 class="slide-title">引薦情境速查指南<br /><span class="title-en">Trigger-Based Referral Guide</span></h2>
-          <p class="slide-desc">
-            遇到以下產業的決策者時，對照右方立即找出引薦對象並開啟話題。<br/>
-            <span class="desc-en">When you meet someone from these industries, instantly identify who to connect them with — and how to open the conversation.</span>
-          </p>
+          <h2 class="slide-title">引薦情境速查指南<span class="title-en">Trigger-Based Referral Guide</span></h2>
+          <p class="slide-desc">遇到以下產業的決策者時，對照右方立即找出引薦對象並開啟話題。<br/><span class="desc-en">When you meet someone from these industries, instantly identify who to connect them with.</span></p>
         </div>
-
         <div class="matrix-grid">
-
-          <div class="matrix-card" id="mx-1">
-            <div class="mx-trigger">
-              <span class="mx-icon">🏟️</span>
-              <div>
-                <div class="mx-trigger-label">遇見… When You Meet…</div>
-                <div class="mx-trigger-type">活動公關、策展公司<br/><span class="en">Expo Organizers &amp; PR Agencies</span></div>
-              </div>
-            </div>
-            <div class="mx-pain">
-              <span class="mx-pain-label">痛點 Pain:</span> 辦了大型論壇，但參與者互動率低，無法量化媒合成果。<br/>
-              <span class="en-pain">Low attendee interaction and no quantified networking ROI for sponsors.</span>
-            </div>
-            <div class="mx-refer">
-              <span class="mx-refer-badge">引薦 Refer To</span>
-              <strong>魏溥辰 Patrick Wei</strong> — AI 商務媒合引擎
-            </div>
-            <div class="mx-hook">
-              <span class="hook-label">💬 開場白:</span>
-              <em>"I know an AI platform founder who helps expos increase attendee networking efficiency and provides quantified ROI reports for your sponsors."</em>
-            </div>
-          </div>
-
-          <div class="matrix-card" id="mx-2">
-            <div class="mx-trigger">
-              <span class="mx-icon">💊</span>
-              <div>
-                <div class="mx-trigger-label">遇見… When You Meet…</div>
-                <div class="mx-trigger-type">保健食品、醫美診所<br/><span class="en">Health Brands &amp; Aesthetic Clinics</span></div>
-              </div>
-            </div>
-            <div class="mx-pain">
-              <span class="mx-pain-label">痛點 Pain:</span> 需要高信任度的客戶見證影片，擺脫價格戰。<br/>
-              <span class="en-pain">Need high-trust client testimonial videos to escape price competition.</span>
-            </div>
-            <div class="mx-refer">
-              <span class="mx-refer-badge">引薦 Refer To</span>
-              <strong>張嘉峻 Jia-Jun Zhang</strong> — 訪談影片製作
-            </div>
-            <div class="mx-hook">
-              <span class="hook-label">💬 開場白:</span>
-              <em>"I work with a video director specializing in brand interview documentaries that have helped clinics raise their pricing power by 30%."</em>
-            </div>
-          </div>
-
-          <div class="matrix-card" id="mx-3">
-            <div class="mx-trigger">
-              <span class="mx-icon">🍱</span>
-              <div>
-                <div class="mx-trigger-label">遇見… When You Meet…</div>
-                <div class="mx-trigger-type">美食甜點廠、港韓進口食品商<br/><span class="en">Food Brands &amp; HK/Overseas Import Traders</span></div>
-              </div>
-            </div>
-            <div class="mx-pain">
-              <span class="mx-pain-label">痛點 Pain:</span> 產品很好，但缺乏台灣電商渠道、團媽資源與整單出貨能力。<br/>
-              <span class="en-pain">Great product but lacking Taiwan e-commerce channels, KOLs, and fulfillment capability.</span>
-            </div>
-            <div class="mx-refer">
-              <span class="mx-refer-badge">引薦 Refer To</span>
-              <strong>江緯達 Mason Jiang</strong> — 品牌導客
-            </div>
-            <div class="mx-hook">
-              <span class="hook-label">💬 開場白:</span>
-              <em>"I have a partner who manages 1,000+ group-buy leaders in Taiwan and sold 120,000 sandwiches in a single day through 7-Eleven channels."</em>
-            </div>
-          </div>
-
-          <div class="matrix-card" id="mx-4">
-            <div class="mx-trigger">
-              <span class="mx-icon">🏢</span>
-              <div>
-                <div class="mx-trigger-label">遇見… When You Meet…</div>
-                <div class="mx-trigger-type">年收3-10億企業主、二代接班<br/><span class="en">SME Owners ($10M–$33M) &amp; 2nd-Gen Leaders</span></div>
-              </div>
-            </div>
-            <div class="mx-pain">
-              <span class="mx-pain-label">痛點 Pain:</span> 商業模式混亂，老闆自己也講不清楚品牌價值與定位。<br/>
-              <span class="en-pain">Chaotic business model — owner can't articulate brand value or positioning.</span>
-            </div>
-            <div class="mx-refer">
-              <span class="mx-refer-badge">引薦 Refer To</span>
-              <strong>謝小涵 Terry Hsieh</strong> — 品牌策略顧問
-            </div>
-            <div class="mx-hook">
-              <span class="hook-label">💬 開場白:</span>
-              <em>"Instead of buying ads piecemeal, you should meet our brand strategy advisor who builds scalable brand systems for companies like Chunghwa Telecom."</em>
-            </div>
-          </div>
-
-          <div class="matrix-card" id="mx-5">
-            <div class="mx-trigger">
-              <span class="mx-icon">✏️</span>
-              <div>
-                <div class="mx-trigger-label">遇見… When You Meet…</div>
-                <div class="mx-trigger-type">新創品牌、需升級品牌形象者<br/><span class="en">Startups &amp; Brands Seeking Visual Upgrade</span></div>
-              </div>
-            </div>
-            <div class="mx-pain">
-              <span class="mx-pain-label">痛點 Pain:</span> LOGO 老舊、缺乏整體企業識別，產品包裝無法在貨架上脫穎而出。<br/>
-              <span class="en-pain">Outdated logo, no VI system, packaging can't stand out on the shelf.</span>
-            </div>
-            <div class="mx-refer">
-              <span class="mx-refer-badge">引薦 Refer To</span>
-              <strong>黃湍晏 Sage Huang</strong> — 企業形象設計
-            </div>
-            <div class="mx-hook">
-              <span class="hook-label">💬 開場白:</span>
-              <em>"You should connect with our design team; they created visual identities and motion graphics for the National Palace Museum and major supermarkets."</em>
-            </div>
-          </div>
-
-          <div class="matrix-card" id="mx-6">
-            <div class="mx-trigger">
-              <span class="mx-icon">📲</span>
-              <div>
-                <div class="mx-trigger-label">遇見… When You Meet…</div>
-                <div class="mx-trigger-type">人資主管、需要員工培訓的企業<br/><span class="en">HR Directors &amp; SMEs Seeking Corporate Training</span></div>
-              </div>
-            </div>
-            <div class="mx-pain">
-              <span class="mx-pain-label">痛點 Pain:</span> 想跟上短影音淘金潮，希望培訓員工自己動手拍片。<br/>
-              <span class="en-pain">Want to ride the short-video wave by training staff to create in-house video IP.</span>
-            </div>
-            <div class="mx-refer">
-              <span class="mx-refer-badge">引薦 Refer To</span>
-              <strong>巫秀陽 Show Wu</strong> — 企業影音 IP 培訓
-            </div>
-            <div class="mx-hook">
-              <span class="hook-label">💬 開場白:</span>
-              <em>"Have you thought about training your staff to build a short-video IP? My partner is a Golden Bell Award–winning TV producer who teaches corporate teams."</em>
-            </div>
-          </div>
-
-          <div class="matrix-card" id="mx-7">
-            <div class="mx-trigger">
-              <span class="mx-icon">👟</span>
-              <div>
-                <div class="mx-trigger-label">遇見… When You Meet…</div>
-                <div class="mx-trigger-type">運動品牌、職業球團、中小企業<br/><span class="en">Sports Brands, Pro Teams &amp; SMEs</span></div>
-              </div>
-            </div>
-            <div class="mx-pain">
-              <span class="mx-pain-label">痛點 Pain:</span> 需要高質感商業廣告拍攝、專業模特兒棚拍或 AI 合成視覺。<br/>
-              <span class="en-pain">Need high-end commercial ad shoots, model lookbooks, or AI-enhanced visuals.</span>
-            </div>
-            <div class="mx-refer">
-              <span class="mx-refer-badge">引薦 Refer To</span>
-              <strong>林家榆 Fei Lin</strong> — 商業攝影
-            </div>
-            <div class="mx-hook">
-              <span class="hook-label">💬 開場白:</span>
-              <em>"I know a commercial photographer who shoots for Nike, Adidas, and top celebrities like Cyndi Wang and Eddie Peng."</em>
-            </div>
-          </div>
-
+          <div class="matrix-card" id="mx-1"><div class="mx-trigger"><span class="mx-icon">🏟️</span><div><div class="mx-trigger-label">遇見… When You Meet…</div><div class="mx-trigger-type">活動公關、策展公司<br/><span class="en">Expo Organizers &amp; PR Agencies</span></div></div></div><div class="mx-pain"><span class="mx-pain-label">痛點 Pain:</span> 辦了大型論壇，但參與者互動率低，無法量化媒合成果。<span class="en-pain">Low attendee interaction and no quantified networking ROI.</span></div><div class="mx-refer"><span class="mx-refer-badge">引薦 Refer To</span><strong>魏溥辰 Patrick Wei</strong></div><div class="mx-hook"><span class="hook-label">💬 開場白:</span><em>"I know an AI platform founder who helps expos increase attendee networking efficiency and provides quantified ROI reports for your sponsors."</em></div></div>
+          <div class="matrix-card" id="mx-2"><div class="mx-trigger"><span class="mx-icon">💊</span><div><div class="mx-trigger-label">遇見… When You Meet…</div><div class="mx-trigger-type">保健食品、醫美診所<br/><span class="en">Health Brands &amp; Aesthetic Clinics</span></div></div></div><div class="mx-pain"><span class="mx-pain-label">痛點 Pain:</span> 需要高信任度的客戶見證影片，擺脫價格戰。<span class="en-pain">Need high-trust client testimonial videos to escape price competition.</span></div><div class="mx-refer"><span class="mx-refer-badge">引薦 Refer To</span><strong>張嘉峻 Jia-Jun Zhang</strong></div><div class="mx-hook"><span class="hook-label">💬 開場白:</span><em>"I work with a video director specializing in brand interview documentaries that have helped clinics raise their pricing power by 30%."</em></div></div>
+          <div class="matrix-card" id="mx-3"><div class="mx-trigger"><span class="mx-icon">🍱</span><div><div class="mx-trigger-label">遇見… When You Meet…</div><div class="mx-trigger-type">美食甜點廠、港韓進口食品商<br/><span class="en">Food Brands &amp; HK/Overseas Import Traders</span></div></div></div><div class="mx-pain"><span class="mx-pain-label">痛點 Pain:</span> 產品很好，但缺乏台灣電商渠道、團媽資源與整單出貨能力。<span class="en-pain">Great product but lacking Taiwan e-commerce channels, KOLs, and fulfillment.</span></div><div class="mx-refer"><span class="mx-refer-badge">引薦 Refer To</span><strong>江緯達 Mason Jiang</strong></div><div class="mx-hook"><span class="hook-label">💬 開場白:</span><em>"I have a partner who manages 1,000+ group-buy leaders in Taiwan and sold 120,000 sandwiches in a single day through 7-Eleven channels."</em></div></div>
+          <div class="matrix-card" id="mx-4"><div class="mx-trigger"><span class="mx-icon">🏢</span><div><div class="mx-trigger-label">遇見… When You Meet…</div><div class="mx-trigger-type">年收3-10億企業主、二代接班<br/><span class="en">SME Owners ($10M–$33M) &amp; 2nd-Gen Leaders</span></div></div></div><div class="mx-pain"><span class="mx-pain-label">痛點 Pain:</span> 商業模式混亂，老闆自己也講不清楚品牌價值與定位。<span class="en-pain">Chaotic business model — owner can't articulate brand value or positioning.</span></div><div class="mx-refer"><span class="mx-refer-badge">引薦 Refer To</span><strong>謝小涵 Terry Hsieh</strong></div><div class="mx-hook"><span class="hook-label">💬 開場白:</span><em>"Instead of buying ads piecemeal, you should meet our brand strategy advisor who builds scalable brand systems for companies like Chunghwa Telecom."</em></div></div>
+          <div class="matrix-card" id="mx-5"><div class="mx-trigger"><span class="mx-icon">✏️</span><div><div class="mx-trigger-label">遇見… When You Meet…</div><div class="mx-trigger-type">新創品牌、需升級品牌形象者<br/><span class="en">Startups &amp; Brands Seeking Visual Upgrade</span></div></div></div><div class="mx-pain"><span class="mx-pain-label">痛點 Pain:</span> LOGO 老舊、缺乏整體企業識別，產品包裝無法在貨架上脫穎而出。<span class="en-pain">Outdated logo, no VI system, packaging can't stand out on the shelf.</span></div><div class="mx-refer"><span class="mx-refer-badge">引薦 Refer To</span><strong>黃湍晏 Sage Huang</strong></div><div class="mx-hook"><span class="hook-label">💬 開場白:</span><em>"You should connect with our design team; they created visual identities and motion graphics for the National Palace Museum and major supermarkets."</em></div></div>
+          <div class="matrix-card" id="mx-6"><div class="mx-trigger"><span class="mx-icon">📲</span><div><div class="mx-trigger-label">遇見… When You Meet…</div><div class="mx-trigger-type">人資主管、需要員工培訓的企業<br/><span class="en">HR Directors &amp; SMEs Seeking Corporate Training</span></div></div></div><div class="mx-pain"><span class="mx-pain-label">痛點 Pain:</span> 想跟上短影音淘金潮，希望培訓員工自己動手拍片。<span class="en-pain">Want to ride the short-video wave by training staff to create in-house video IP.</span></div><div class="mx-refer"><span class="mx-refer-badge">引薦 Refer To</span><strong>巫秀陽 Show Wu</strong></div><div class="mx-hook"><span class="hook-label">💬 開場白:</span><em>"Have you thought about training your staff to build a short-video IP? My partner is a Golden Bell Award–winning TV producer who teaches corporate teams."</em></div></div>
+          <div class="matrix-card" id="mx-7"><div class="mx-trigger"><span class="mx-icon">👟</span><div><div class="mx-trigger-label">遇見… When You Meet…</div><div class="mx-trigger-type">運動品牌、職業球團、中小企業<br/><span class="en">Sports Brands, Pro Teams &amp; SMEs</span></div></div></div><div class="mx-pain"><span class="mx-pain-label">痛點 Pain:</span> 需要高質感商業廣告拍攝、專業模特兒棚拍或 AI 合成視覺。<span class="en-pain">Need high-end commercial ad shoots, model lookbooks, or AI-enhanced visuals.</span></div><div class="mx-refer"><span class="mx-refer-badge">引薦 Refer To</span><strong>林家榆 Fei Lin</strong></div><div class="mx-hook"><span class="hook-label">💬 開場白:</span><em>"I know a commercial photographer who shoots for Nike, Adidas, and top celebrities like Cyndi Wang and Eddie Peng."</em></div></div>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 3: ASKS & GIVES CHEAT SHEET ─── -->
+    <!-- ASKS & GIVES -->
     <section class="slide slide-dark" id="slide-cheat">
       <div class="slide-inner">
         <div class="slide-header">
           <div class="slide-tag">03 · 需求對照 WEEKLY CHEAT SHEET</div>
-          <h2 class="slide-title">本週需求 &amp; 資源對照<br /><span class="title-en">This Week's Asks &amp; Gives</span></h2>
-          <p class="slide-desc">
-            左欄＝本週急需引薦的對象 &nbsp;｜&nbsp; 右欄＝會員可提供的現成人脈資源<br/>
-            <span class="desc-en">Left = who they urgently need introduced · Right = what resources they can offer your network right now.</span>
-          </p>
+          <h2 class="slide-title">本週需求 &amp; 資源對照<span class="title-en">This Week's Asks &amp; Gives</span></h2>
+          <p class="slide-desc">左欄＝本週急需引薦的對象 ｜ 右欄＝會員可提供的現成人脈資源<br/><span class="desc-en">Left = who they urgently need introduced · Right = resources they can offer your network.</span></p>
         </div>
-
         <div class="cheat-table-wrap">
           <table class="cheat-table">
-            <thead>
-              <tr>
-                <th class="col-member">會員 Member</th>
-                <th class="col-ask">🔍 本週急找 This Week's ASK<br><span class="th-sub">需要引薦的對象 · Who are they looking for?</span></th>
-                <th class="col-give">🤝 可提供資源 This Week's GIVE<br><span class="th-sub">能分享的人脈 · What can they offer you?</span></th>
-              </tr>
-            </thead>
+            <thead><tr><th class="col-member">會員 Member</th><th class="col-ask">🔍 本週急找 This Week's ASK<br><span class="th-sub">需要引薦的對象 · Who are they looking for?</span></th><th class="col-give">🤝 可提供資源 This Week's GIVE<br><span class="th-sub">能分享的人脈 · What can they offer you?</span></th></tr></thead>
             <tbody>
-              <tr id="ct-patrick">
-                <td class="col-member">
-                  <div class="ct-badge ct-green">284</div>
-                  <div class="ct-photo-wrap">
-                    <!-- PHOTO: patrick -->
-                    <div class="ct-avatar ct-av-green">PW</div>
-                  </div>
-                  <strong>魏溥辰<br/><span class="en">Patrick Wei</span></strong>
-                  <div class="ct-role">AI 商務媒合 · Matchverse.ai</div>
-                </td>
-                <td class="col-ask">
-                  <ul>
-                    <li>活動公關、策展公司<br/><span class="en">Event PR &amp; Experiential Agencies</span></li>
-                    <li>會展主辦方<br/><span class="en">Conference / Expo Organizers</span></li>
-                    <li>人資主管與領導力顧問<br/><span class="en">HR Directors &amp; Leadership Consultants</span></li>
-                  </ul>
-                </td>
-                <td class="col-give">
-                  <ul>
-                    <li>雲林、台中地方創生與 AI 論壇資源<br/><span class="en">Local revitalization &amp; AI forum connections in Yunlin / Taichung</span></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr id="ct-jiajun">
-                <td class="col-member">
-                  <div class="ct-badge ct-blue">011</div>
-                  <div class="ct-photo-wrap">
-                    <!-- PHOTO: jiajun -->
-                    <div class="ct-avatar ct-av-blue">JZ</div>
-                  </div>
-                  <strong>張嘉峻<br/><span class="en">Jia-Jun Zhang</span></strong>
-                  <div class="ct-role">訪談影片 · A+2 Video</div>
-                </td>
-                <td class="col-ask">
-                  <ul>
-                    <li>保健食品商<br/><span class="en">Health Supplement Brands</span></li>
-                    <li>醫美診所<br/><span class="en">Aesthetic Medicine Clinics</span></li>
-                    <li>醫美材料商<br/><span class="en">Medical Aesthetic Equipment Suppliers</span></li>
-                  </ul>
-                </td>
-                <td class="col-give">
-                  <ul>
-                    <li>20坪（66㎡）攝影棚<br/><span class="en">66 sq.m. professional studio</span></li>
-                    <li>百萬影像設備<br/><span class="en">NT$1M+ camera equipment</span></li>
-                    <li>攝影 / 燈光 / 彩妝專業人才<br/><span class="en">Full crew: DOP · Lighting · MUA</span></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr id="ct-mason">
-                <td class="col-member">
-                  <div class="ct-badge ct-orange">115</div>
-                  <div class="ct-photo-wrap">
-                    <!-- PHOTO: mason -->
-                    <div class="ct-avatar ct-av-orange">MJ</div>
-                  </div>
-                  <strong>江緯達<br/><span class="en">Mason Jiang</span></strong>
-                  <div class="ct-role">品牌導客 · GS Marketing</div>
-                </td>
-                <td class="col-ask">
-                  <ul>
-                    <li>美食甜點廠（想成爆款團購品）<br/><span class="en">Gourmet Dessert Makers (viral group-buy potential)</span></li>
-                    <li>香港食品進口貿易商<br/><span class="en">HK Food Import / Export Traders</span></li>
-                    <li>想銷售到台灣的香港美食品牌<br/><span class="en">HK Food Brands entering Taiwan market</span></li>
-                  </ul>
-                </td>
-                <td class="col-give">
-                  <ul>
-                    <li>台灣食品 / 醫美 / 寵物品牌合作<br/><span class="en">Brand partnerships: Food / Medical Aesthetics / Pets</span></li>
-                    <li>一條龍進口到銷售出貨物流<br/><span class="en">End-to-end import &amp; fulfillment pipeline</span></li>
-                    <li>10 位設計師協助圖文素材<br/><span class="en">In-house 10-person design team</span></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr id="ct-terry">
-                <td class="col-member">
-                  <div class="ct-badge ct-purple">186</div>
-                  <div class="ct-photo-wrap">
-                    <!-- PHOTO: terry -->
-                    <div class="ct-avatar ct-av-purple">TH</div>
-                  </div>
-                  <strong>謝小涵<br/><span class="en">Terry Hsieh</span></strong>
-                  <div class="ct-role">品牌策略 · TSG 特里創意</div>
-                </td>
-                <td class="col-ask">
-                  <ul>
-                    <li>新創公司<br/><span class="en">High-growth Startups</span></li>
-                    <li>年營業額 3-10 億企業主<br/><span class="en">SME Owners $10M–$33M USD</span></li>
-                    <li>集團多品牌、二代接班<br/><span class="en">Multi-brand Conglomerates &amp; 2nd Gen</span></li>
-                  </ul>
-                </td>
-                <td class="col-give">
-                  <ul>
-                    <li>教育聯盟人脈資源<br/><span class="en">Education Alliance network connections</span></li>
-                    <li>健康聯盟人脈資源<br/><span class="en">Health &amp; Wellness Alliance network</span></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr id="ct-sage">
-                <td class="col-member">
-                  <div class="ct-badge ct-pink">216</div>
-                  <div class="ct-photo-wrap">
-                    <!-- PHOTO: sage -->
-                    <div class="ct-avatar ct-av-pink">SH</div>
-                  </div>
-                  <strong>黃湍晏<br/><span class="en">Sage Huang</span></strong>
-                  <div class="ct-role">企業形象設計 · SEAN 藝術</div>
-                </td>
-                <td class="col-ask">
-                  <ul>
-                    <li>有商標、企業識別需求客戶<br/><span class="en">Clients needing Logo / VI design</span></li>
-                    <li>商業插畫合作案<br/><span class="en">Commercial illustration projects</span></li>
-                  </ul>
-                </td>
-                <td class="col-give">
-                  <ul>
-                    <li>妞妞十選：玩具 YouTuber 選物平台<br/><span class="en">Toy YouTuber e-commerce platform</span></li>
-                    <li>光明分子：精品眼鏡代理<br/><span class="en">Luxury eyewear distributor</span></li>
-                    <li>EGO：全球定位護照套<br/><span class="en">Global GPS tracking passport holder</span></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr id="ct-show">
-                <td class="col-member">
-                  <div class="ct-badge ct-teal">226</div>
-                  <div class="ct-photo-wrap">
-                    <!-- PHOTO: show -->
-                    <div class="ct-avatar ct-av-teal">SW</div>
-                  </div>
-                  <strong>巫秀陽<br/><span class="en">Show Wu</span></strong>
-                  <div class="ct-role">影音 IP 培訓 · 老巫翻新</div>
-                </td>
-                <td class="col-ask">
-                  <ul>
-                    <li>中小企業、上市櫃公司教育訓練<br/><span class="en">SMEs &amp; Listed Companies (Training)</span></li>
-                    <li>短影音 IP 打造、募資簡報、心智圖<br/><span class="en">Short-Video IP · Pitch Decks · Mind Mapping</span></li>
-                  </ul>
-                </td>
-                <td class="col-give">
-                  <ul>
-                    <li>50年老店水電材料行人脈<br/><span class="en">50-year plumbing &amp; electrical supply chain connections</span></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr id="ct-fei">
-                <td class="col-member">
-                  <div class="ct-badge ct-red">278</div>
-                  <div class="ct-photo-wrap">
-                    <!-- PHOTO: fei -->
-                    <div class="ct-avatar ct-av-red">FL</div>
-                  </div>
-                  <strong>林家榆<br/><span class="en">Fei Lin</span></strong>
-                  <div class="ct-role">商業攝影 · FEIFOTO Studio</div>
-                </td>
-                <td class="col-ask">
-                  <ul>
-                    <li>有廣告拍攝需求的運動品牌<br/><span class="en">Sports Brands needing ad shoots</span></li>
-                    <li>有商品拍攝需求的中小型企業<br/><span class="en">SMEs needing product photography</span></li>
-                    <li>職業球團<br/><span class="en">Professional Sports Franchises / Teams</span></li>
-                  </ul>
-                </td>
-                <td class="col-give">
-                  <ul>
-                    <li>影視資源：商品植入戲劇<br/><span class="en">TV / Drama product placement</span></li>
-                    <li>藝人資源：業配代言<br/><span class="en">Celebrity endorsement network</span></li>
-                    <li>上海酒吧 VIP 資源<br/><span class="en">Shanghai VIP lounge access</span></li>
-                  </ul>
-                </td>
-              </tr>
+              <tr id="ct-patrick"><td class="col-member"><div class="ct-badge ct-green">284</div><div class="ct-photo-wrap"><div class="ct-avatar ct-av-green" data-member="patrick">PW</div></div><strong>魏溥辰<br/><span class="en">Patrick Wei</span></strong><div class="ct-role">AI 商務媒合 · Matchverse.ai</div></td><td class="col-ask"><ul><li>活動公關、策展公司<br/><span class="en">Event PR &amp; Experiential Agencies</span></li><li>會展主辦方<br/><span class="en">Conference / Expo Organizers</span></li><li>人資主管與領導力顧問<br/><span class="en">HR Directors &amp; Leadership Consultants</span></li></ul></td><td class="col-give"><ul><li>雲林、台中地方創生與 AI 論壇資源<br/><span class="en">Local revitalization &amp; AI forum connections in Yunlin / Taichung</span></li></ul></td></tr>
+              <tr id="ct-jiajun"><td class="col-member"><div class="ct-badge ct-blue">011</div><div class="ct-photo-wrap"><div class="ct-avatar ct-av-blue" data-member="jiajun">JZ</div></div><strong>張嘉峻<br/><span class="en">Jia-Jun Zhang</span></strong><div class="ct-role">訪談影片 · A+2 Video</div></td><td class="col-ask"><ul><li>保健食品商<br/><span class="en">Health Supplement Brands</span></li><li>醫美診所<br/><span class="en">Aesthetic Medicine Clinics</span></li><li>醫美材料商<br/><span class="en">Medical Aesthetic Equipment Suppliers</span></li></ul></td><td class="col-give"><ul><li>20坪（66㎡）攝影棚<br/><span class="en">66 sq.m. professional studio</span></li><li>百萬影像設備<br/><span class="en">NT$1M+ camera equipment</span></li><li>攝影 / 燈光 / 彩妝專業人才<br/><span class="en">Full crew: DOP · Lighting · MUA</span></li></ul></td></tr>
+              <tr id="ct-mason"><td class="col-member"><div class="ct-badge ct-orange">115</div><div class="ct-photo-wrap"><div class="ct-avatar ct-av-orange" data-member="mason">MJ</div></div><strong>江緯達<br/><span class="en">Mason Jiang</span></strong><div class="ct-role">品牌導客 · GS Marketing</div></td><td class="col-ask"><ul><li>美食甜點廠（想成爆款團購品）<br/><span class="en">Gourmet Dessert Makers (viral group-buy)</span></li><li>香港食品進口貿易商<br/><span class="en">HK Food Import / Export Traders</span></li><li>想銷售到台灣的香港美食品牌<br/><span class="en">HK Food Brands entering Taiwan market</span></li></ul></td><td class="col-give"><ul><li>台灣食品 / 醫美 / 寵物品牌合作<br/><span class="en">Brand partnerships: Food / Aesthetics / Pets</span></li><li>一條龍進口到銷售出貨物流<br/><span class="en">End-to-end import &amp; fulfillment pipeline</span></li><li>10 位設計師協助圖文素材<br/><span class="en">In-house 10-person design team</span></li></ul></td></tr>
+              <tr id="ct-terry"><td class="col-member"><div class="ct-badge ct-purple">186</div><div class="ct-photo-wrap"><div class="ct-avatar ct-av-purple" data-member="terry">TH</div></div><strong>謝小涵<br/><span class="en">Terry Hsieh</span></strong><div class="ct-role">品牌策略 · TSG 特里創意</div></td><td class="col-ask"><ul><li>新創公司<br/><span class="en">High-growth Startups</span></li><li>年營業額 3-10 億企業主<br/><span class="en">SME Owners $10M–$33M USD</span></li><li>集團多品牌、二代接班<br/><span class="en">Multi-brand Conglomerates &amp; 2nd Gen</span></li></ul></td><td class="col-give"><ul><li>教育聯盟人脈資源<br/><span class="en">Education Alliance network connections</span></li><li>健康聯盟人脈資源<br/><span class="en">Health &amp; Wellness Alliance network</span></li></ul></td></tr>
+              <tr id="ct-sage"><td class="col-member"><div class="ct-badge ct-pink">216</div><div class="ct-photo-wrap"><div class="ct-avatar ct-av-pink" data-member="sage">SH</div></div><strong>黃湍晏<br/><span class="en">Sage Huang</span></strong><div class="ct-role">企業形象設計 · SEAN 藝術</div></td><td class="col-ask"><ul><li>有商標、企業識別需求客戶<br/><span class="en">Clients needing Logo / VI design</span></li><li>商業插畫合作案<br/><span class="en">Commercial illustration projects</span></li></ul></td><td class="col-give"><ul><li>妞妞十選：玩具 YouTuber 選物平台<br/><span class="en">Toy YouTuber e-commerce platform</span></li><li>光明分子：精品眼鏡代理<br/><span class="en">Luxury eyewear distributor</span></li><li>EGO：全球定位護照套<br/><span class="en">Global GPS tracking passport holder</span></li></ul></td></tr>
+              <tr id="ct-show"><td class="col-member"><div class="ct-badge ct-teal">226</div><div class="ct-photo-wrap"><div class="ct-avatar ct-av-teal" data-member="show">SW</div></div><strong>巫秀陽<br/><span class="en">Show Wu</span></strong><div class="ct-role">影音 IP 培訓 · 老巫翻新</div></td><td class="col-ask"><ul><li>中小企業、上市櫃公司教育訓練<br/><span class="en">SMEs &amp; Listed Companies (Training)</span></li><li>短影音 IP 打造、募資簡報、心智圖<br/><span class="en">Short-Video IP · Pitch Decks · Mind Mapping</span></li></ul></td><td class="col-give"><ul><li>50年老店水電材料行人脈<br/><span class="en">50-year plumbing &amp; electrical supply chain</span></li></ul></td></tr>
+              <tr id="ct-fei"><td class="col-member"><div class="ct-badge ct-red">278</div><div class="ct-photo-wrap"><div class="ct-avatar ct-av-red" data-member="fei">FL</div></div><strong>林家榆<br/><span class="en">Fei Lin</span></strong><div class="ct-role">商業攝影 · FEIFOTO Studio</div></td><td class="col-ask"><ul><li>有廣告拍攝需求的運動品牌<br/><span class="en">Sports Brands needing ad shoots</span></li><li>有商品拍攝需求的中小型企業<br/><span class="en">SMEs needing product photography</span></li><li>職業球團<br/><span class="en">Professional Sports Franchises / Teams</span></li></ul></td><td class="col-give"><ul><li>影視資源：商品植入戲劇<br/><span class="en">TV / Drama product placement</span></li><li>藝人資源：業配代言<br/><span class="en">Celebrity endorsement network</span></li><li>上海酒吧 VIP 資源<br/><span class="en">Shanghai VIP lounge access</span></li></ul></td></tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 4: TARGET MARKETS ─── -->
+    <!-- TARGET MARKETS -->
     <section class="slide" id="slide-targets">
       <div class="slide-inner">
         <div class="slide-header">
           <div class="slide-tag">04 · 目標市場 TARGET MARKETS</div>
-          <h2 class="slide-title">7 大黃金目標產業<br /><span class="title-en">7 Golden Target Industries</span></h2>
-          <p class="slide-desc">
-            若您的客戶屬於以下領域，本組全員可提供從品牌定位、視覺攝影、影音培訓到通路導客與展會媒合的一站式服務！<br/>
-            <span class="desc-en">If your contact operates in any of these sectors, our team provides end-to-end support — brand strategy, VI design, video, photography, lead-gen, and AI business matching.</span>
-          </p>
+          <h2 class="slide-title">7 大黃金目標產業<span class="title-en">7 Golden Target Industries</span></h2>
+          <p class="slide-desc">若您的客戶屬於以下領域，本組全員可提供從品牌定位、視覺攝影、影音培訓到通路導客與展會媒合的一站式服務！<br/><span class="desc-en">If your contact operates in any of these sectors, our team provides full end-to-end support.</span></p>
         </div>
-
         <div class="target-grid">
-          <div class="target-card" id="tg-1">
-            <div class="tg-icon">🏬</div>
-            <div class="tg-num">01</div>
-            <h3 class="tg-title">本土零售品牌<br/><span class="en">Local Retail Brands</span></h3>
-            <p class="tg-desc">尋求視覺識別、銷售渠道擴展與數位內容的台灣消費品牌。<br/><span class="en">Taiwan-based consumer brands seeking visual identity, channel expansion, and digital content.</span></p>
-          </div>
-          <div class="target-card" id="tg-2">
-            <div class="tg-icon">🌿</div>
-            <div class="tg-num">02</div>
-            <h3 class="tg-title">在地傳產特產品牌<br/><span class="en">Traditional &amp; Local Specialty Brands</span></h3>
-            <p class="tg-desc">傳統製造業與地方特產品牌，正在現代化品牌與通路佈局。<br/><span class="en">Heritage manufacturers and regional producers modernizing their brand and distribution.</span></p>
-          </div>
-          <div class="target-card" id="tg-3">
-            <div class="tg-icon">🏭</div>
-            <div class="tg-num">03</div>
-            <h3 class="tg-title">OEM 製造商<br/><span class="en">OEM / ODM Manufacturers</span></h3>
-            <p class="tg-desc">從純代工轉型至自有品牌，需要品牌建立與行銷的工廠。<br/><span class="en">Factories transitioning from OEM to own-brand, requiring brand-building and marketing.</span></p>
-          </div>
-          <div class="target-card" id="tg-4">
-            <div class="tg-icon">🛒</div>
-            <div class="tg-num">04</div>
-            <h3 class="tg-title">FMCG 消費品牌<br/><span class="en">FMCG Consumer Brands</span></h3>
-            <p class="tg-desc">快消品品牌，尋求團購渠道、KOL 行銷與高影響力包裝設計。<br/><span class="en">Fast-moving consumer goods brands seeking group-buy channels, KOL marketing, and impactful packaging.</span></p>
-          </div>
-          <div class="target-card" id="tg-5">
-            <div class="tg-icon">🍽️</div>
-            <div class="tg-num">05</div>
-            <h3 class="tg-title">連鎖餐飲 / 藥妝服務<br/><span class="en">Restaurant &amp; Pharmacy Chains</span></h3>
-            <p class="tg-desc">多據點服務品牌，需要統一 VI、數位培訓與客戶獲取策略。<br/><span class="en">Multi-location service brands needing coherent VI, digital training, and customer acquisition.</span></p>
-          </div>
-          <div class="target-card" id="tg-6">
-            <div class="tg-icon">⚙️</div>
-            <div class="tg-num">06</div>
-            <h3 class="tg-title">B2B 設備 / 原物料製造商<br/><span class="en">B2B Equipment &amp; Raw Materials</span></h3>
-            <p class="tg-desc">工業供應商，透過專業影片內容與 VI 系統提升品牌公信力。<br/><span class="en">Industrial suppliers seeking to elevate credibility through video content and VI systems.</span></p>
-          </div>
-          <div class="target-card" id="tg-7">
-            <div class="tg-icon">💻</div>
-            <div class="tg-num">07</div>
-            <h3 class="tg-title">軟硬體品牌端<br/><span class="en">Software &amp; Hardware Tech Brands</span></h3>
-            <p class="tg-desc">科技公司，需要會展媒合解決方案、品牌故事敘述與高端視覺製作。<br/><span class="en">Tech companies requiring conference networking solutions, brand storytelling, and high-end visual production.</span></p>
-          </div>
+          <div class="target-card" id="tg-1"><div class="tg-icon">🏬</div><div class="tg-num">01</div><h3 class="tg-title">本土零售品牌<br/><span class="en">Local Retail Brands</span></h3><p class="tg-desc">尋求視覺識別、渠道擴展與數位內容的台灣消費品牌。<br/><span class="en">Taiwan-based brands seeking visual identity, channel expansion, and digital content.</span></p></div>
+          <div class="target-card" id="tg-2"><div class="tg-icon">🌿</div><div class="tg-num">02</div><h3 class="tg-title">在地傳產特產品牌<br/><span class="en">Traditional &amp; Local Specialty Brands</span></h3><p class="tg-desc">傳統製造業與地方特產品牌，正在現代化品牌與通路佈局。<br/><span class="en">Heritage manufacturers modernizing their brand and distribution.</span></p></div>
+          <div class="target-card" id="tg-3"><div class="tg-icon">🏭</div><div class="tg-num">03</div><h3 class="tg-title">OEM 製造商<br/><span class="en">OEM / ODM Manufacturers</span></h3><p class="tg-desc">從純代工轉型至自有品牌，需要品牌建立與行銷的工廠。<br/><span class="en">Factories transitioning from OEM to own-brand, requiring brand-building.</span></p></div>
+          <div class="target-card" id="tg-4"><div class="tg-icon">🛒</div><div class="tg-num">04</div><h3 class="tg-title">FMCG 消費品牌<br/><span class="en">FMCG Consumer Brands</span></h3><p class="tg-desc">快消品品牌，尋求團購渠道、KOL 行銷與高影響力包裝設計。<br/><span class="en">FMCG brands seeking group-buy channels, KOL marketing, and impactful packaging.</span></p></div>
+          <div class="target-card" id="tg-5"><div class="tg-icon">🍽️</div><div class="tg-num">05</div><h3 class="tg-title">連鎖餐飲 / 藥妝服務<br/><span class="en">Restaurant &amp; Pharmacy Chains</span></h3><p class="tg-desc">多據點服務品牌，需要統一 VI、數位培訓與客戶獲取策略。<br/><span class="en">Multi-location service brands needing coherent VI, training, and customer acquisition.</span></p></div>
+          <div class="target-card" id="tg-6"><div class="tg-icon">⚙️</div><div class="tg-num">06</div><h3 class="tg-title">B2B 設備 / 原物料製造商<br/><span class="en">B2B Equipment &amp; Raw Materials</span></h3><p class="tg-desc">工業供應商，透過專業影片內容與 VI 系統提升品牌公信力。<br/><span class="en">Industrial suppliers elevating credibility through video content and VI systems.</span></p></div>
+          <div class="target-card" id="tg-7"><div class="tg-icon">💻</div><div class="tg-num">07</div><h3 class="tg-title">軟硬體品牌端<br/><span class="en">Software &amp; Hardware Tech Brands</span></h3><p class="tg-desc">科技公司，需要會展媒合解決方案、品牌故事敘述與高端視覺製作。<br/><span class="en">Tech companies requiring conference networking, brand storytelling, and visual production.</span></p></div>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 5: PATRICK WEI ─── -->
+    <!-- PROFILE: PATRICK -->
     <section class="slide slide-dark" id="slide-patrick">
       <div class="slide-inner profile-layout">
         <div class="profile-left">
           <div class="profile-number">#284</div>
-          <!-- PHOTO SLOT patrick: 請將照片命名為 patrick.jpg 放入專案資料夾 -->
-          <div class="profile-photo-wrap">
-            <div class="profile-avatar pav-green" id="photo-patrick">PW</div>
-          </div>
+          <div class="profile-photo-wrap"><div class="profile-avatar pav-green" id="photo-patrick">PW</div></div>
           <div class="profile-name">魏溥辰 <span class="profile-name-en">Patrick Wei</span></div>
           <div class="profile-role">AI 商務媒合引擎<br/><span class="en">AI Business Matching Engine</span></div>
           <div class="profile-company">Matchverse.ai</div>
-          <div class="profile-contact">
-            <div class="contact-item">📱 +886-919-715-807</div>
-            <div class="contact-item">📧 patrick@matchverse.ai</div>
-          </div>
-          <div class="profile-clients">
-            <div class="clients-label">代表客戶 Key Clients</div>
-            <div class="client-tags">
-              <span>WPG Holdings 大大通</span>
-              <span>Cartier 卡地亞</span>
-              <span>桃園青年局</span>
-              <span>BNI Singapore</span>
-              <span>InnoVEX</span>
-            </div>
-          </div>
+          <div class="profile-contact"><div class="contact-item">📱 +886-919-715-807</div><div class="contact-item">📧 patrick@matchverse.ai</div></div>
+          <div class="profile-clients"><div class="clients-label">代表客戶 Key Clients</div><div class="client-tags"><span>WPG Holdings 大大通</span><span>Cartier 卡地亞</span><span>桃園青年局</span><span>BNI Singapore</span><span>InnoVEX</span></div></div>
         </div>
         <div class="profile-right">
           <div class="slide-tag">05 · 會員檔案 MEMBER PROFILE</div>
           <h2 class="slide-title sm">Matchverse.ai</h2>
           <p class="profile-tagline">讓人脈資源在每場活動中價值最大化的 AI 商務媒合 App。<br/><span class="en">The AI-powered business networking app that maximizes the value of human connections at every event.</span></p>
-
           <div class="profile-highlights">
-            <div class="highlight-item" id="ph-p1">
-              <div class="hi-icon">🎯</div>
-              <div>
-                <strong>AI 需求驅動媒合 <span class="hl-en">AI Demand-Driven Matching</span></strong>
-                <p>收集合作需求與理想客群，在現場即時創造高效商業媒合。<br/><span class="en">Collects attendees' partnership needs and ideal client profiles, creating high-efficiency business matches in real time.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-p2">
-              <div class="hi-icon">📍</div>
-              <div>
-                <strong>現場精準導流 <span class="hl-en">On-Site Precision Routing</span></strong>
-                <p>AI 推薦對的人、對的桌、對的攤位，大幅提升洽談品質與成交效率。<br/><span class="en">AI recommends the right person, table, and booth — dramatically improving meeting quality and deal conversion.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-p3">
-              <div class="hi-icon">🏛️</div>
-              <div>
-                <strong>MIT / iiLabs 數位轉型策略分析師 <span class="hl-en">Digital Transformation Analyst</span></strong>
-                <p>橋接 AI 技術與企業數位轉型框架的策略顧問。<br/><span class="en">Strategic advisor bridging AI technology with enterprise digital transformation frameworks.</span></p>
-              </div>
-            </div>
+            <div class="highlight-item"><div class="hi-icon">🎯</div><div><strong>AI 需求驅動媒合 <span class="hl-en">AI Demand-Driven Matching</span></strong><p>收集合作需求與理想客群，在現場即時創造高效商業媒合。<br/><span class="en">Collects attendees' partnership needs and creates high-efficiency business matches in real time.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">📍</div><div><strong>現場精準導流 <span class="hl-en">On-Site Precision Routing</span></strong><p>AI 推薦對的人、對的桌、對的攤位，大幅提升洽談品質與成交效率。<br/><span class="en">AI recommends the right person, table, and booth — dramatically improving meeting quality and deal conversion.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">🏛️</div><div><strong>MIT / iiLabs 數位轉型策略分析師 <span class="hl-en">Digital Transformation Analyst</span></strong><p>橋接 AI 技術與企業數位轉型框架的策略顧問。<br/><span class="en">Strategic advisor bridging AI technology with enterprise digital transformation frameworks.</span></p></div></div>
           </div>
-
-          <div class="tier-box">
-            <div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
-            <div class="tier-row" id="tr-p1">
-              <div class="tier-badge tier-general">一般 General</div>
-              <div class="tier-text">各規模會展主辦與活動公司，想把互動與媒合優化並量化成果。<br/><span class="en">Expo organizers &amp; event agencies wanting to optimize networking and quantify ROI for sponsors.</span></div>
-            </div>
-            <div class="tier-row" id="tr-p2">
-              <div class="tier-badge tier-ideal">理想 Ideal</div>
-              <div class="tier-text">場地、票務、行銷與招商單位，提供媒合方案與成果報告。<br/><span class="en">Venues, ticketing platforms, and event marketing teams needing matching solutions &amp; post-event analytics.</span></div>
-            </div>
-            <div class="tier-row" id="tr-p3">
-              <div class="tier-badge tier-dream">夢幻 Dream</div>
-              <div class="tier-text">國際型展會產業鏈，主辦、場館與媒體平台共創成果型招商。<br/><span class="en">International expo leaders, venue operators, and media platforms co-creating outcome-based sponsorship models.</span></div>
-            </div>
+          <div class="tier-box"><div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
+            <div class="tier-row"><div class="tier-badge tier-general">一般 General</div><div class="tier-text">各規模會展主辦與活動公司，想把互動與媒合優化並量化成果。<br/><span class="en">Expo organizers &amp; event agencies wanting to optimize networking and quantify ROI for sponsors.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-ideal">理想 Ideal</div><div class="tier-text">場地、票務、行銷與招商單位，提供媒合方案與成果報告。<br/><span class="en">Venues, ticketing platforms, and event marketing teams needing matching solutions &amp; post-event analytics.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-dream">夢幻 Dream</div><div class="tier-text">國際型展會產業鏈，主辦、場館與媒體平台共創成果型招商。<br/><span class="en">International expo leaders, venue operators, and media platforms co-creating outcome-based sponsorship models.</span></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 6: JIA-JUN ZHANG ─── -->
+    <!-- PROFILE: JIA-JUN -->
     <section class="slide" id="slide-jiajun">
       <div class="slide-inner profile-layout">
         <div class="profile-left">
           <div class="profile-number">#011</div>
-          <!-- PHOTO SLOT jiajun: 請將照片命名為 jiajun.jpg 放入專案資料夾 -->
-          <div class="profile-photo-wrap">
-            <div class="profile-avatar pav-blue" id="photo-jiajun">JZ</div>
-          </div>
+          <div class="profile-photo-wrap"><div class="profile-avatar pav-blue" id="photo-jiajun">JZ</div></div>
           <div class="profile-name">張嘉峻 <span class="profile-name-en">Jia-Jun Zhang</span></div>
           <div class="profile-role">訪談影片製作<br/><span class="en">Interview Video Production</span></div>
           <div class="profile-company">艾加二 A+2 Video Production</div>
-          <div class="profile-clients">
-            <div class="clients-label">代表客戶 Key Clients</div>
-            <div class="client-tags">
-              <span>LINE</span><span>3M</span><span>Meta</span>
-              <span>Microsoft</span><span>Blueseeds 芙彤園</span><span>YoHoPower 悠活</span>
-            </div>
-          </div>
+          <div class="profile-clients"><div class="clients-label">代表客戶 Key Clients</div><div class="client-tags"><span>LINE</span><span>3M</span><span>Meta</span><span>Microsoft</span><span>Blueseeds 芙彤園</span><span>YoHoPower 悠活</span></div></div>
         </div>
         <div class="profile-right">
           <div class="slide-tag">06 · 會員檔案 MEMBER PROFILE</div>
           <h2 class="slide-title sm">A+2 Video Production</h2>
           <p class="profile-tagline">用訪談影像提升品牌價值，讓你的產品售價提升 30%！<br/><span class="en">Elevate your brand value through interview-driven storytelling — and raise your price tag by 30%.</span></p>
-
           <div class="profile-highlights">
-            <div class="highlight-item" id="ph-j1">
-              <div class="hi-icon">💰</div>
-              <div>
-                <strong>定價力 +30% <span class="hl-en">Pricing Power +30%</span></strong>
-                <p>訪談形式品牌影片建立信任感，讓客戶脫離價格競爭、掌握溢價空間。<br/><span class="en">Interview-format brand films build trust that commodities cannot — helping clients escape price wars and command premium pricing.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-j2">
-              <div class="hi-icon">🎥</div>
-              <div>
-                <strong>完整攝影棚 <span class="hl-en">Full Studio Access</span></strong>
-                <p>20坪（66㎡）專業攝影棚、百萬影像設備、導演／攝影師／燈光／彩妝全配。<br/><span class="en">66 sq.m. professional studio with NT$1M+ camera equipment, full lighting rig, and dedicated crew including MUA.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-j3">
-              <div class="hi-icon">📌</div>
-              <div>
-                <strong>服務範圍 <span class="hl-en">Service Scope</span></strong>
-                <p>活動紀錄 · 人物故事 · 企業形象影片 · 客戶見證 · 節目製作。<br/><span class="en">Event coverage · Human interest docs · Corporate image films · Client testimonials · Program production.</span></p>
-              </div>
-            </div>
+            <div class="highlight-item"><div class="hi-icon">💰</div><div><strong>定價力 +30% <span class="hl-en">Pricing Power +30%</span></strong><p>訪談形式品牌影片建立信任感，讓客戶脫離價格競爭、掌握溢價空間。<br/><span class="en">Interview-format brand films build trust that commodities cannot — helping clients escape price wars.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">🎥</div><div><strong>完整攝影棚 <span class="hl-en">Full Studio Access</span></strong><p>20坪（66㎡）專業攝影棚、百萬影像設備、導演／攝影師／燈光／彩妝全配。<br/><span class="en">66 sq.m. professional studio with NT$1M+ camera equipment, full lighting rig, and dedicated crew.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">📌</div><div><strong>服務範圍 <span class="hl-en">Service Scope</span></strong><p>活動紀錄 · 人物故事 · 企業形象影片 · 客戶見證 · 節目製作。<br/><span class="en">Event coverage · Human interest docs · Corporate image films · Testimonials · Program production.</span></p></div></div>
           </div>
-
-          <div class="tier-box">
-            <div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
-            <div class="tier-row" id="tr-j1">
-              <div class="tier-badge tier-general">一般 General</div>
-              <div class="tier-text">精品、論壇活動紀錄（酒商、車商、TEDx Talk）。<br/><span class="en">Luxury brands &amp; forum event coverage — wine, automotive, TED-style talks, trade associations.</span></div>
-            </div>
-            <div class="tier-row" id="tr-j2">
-              <div class="tier-badge tier-ideal">理想 Ideal</div>
-              <div class="tier-text">品牌顧問、行銷顧問。<br/><span class="en">Brand consultants and marketing consultants who need video production partners for client campaigns.</span></div>
-            </div>
-            <div class="tier-row" id="tr-j3">
-              <div class="tier-badge tier-dream">夢幻 Dream</div>
-              <div class="tier-text">醫美 / 診所行銷廠商、製作大量訪談的工協會。<br/><span class="en">Medical aesthetic clinic marketing agencies and industry associations producing large-volume interview series.</span></div>
-            </div>
+          <div class="tier-box"><div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
+            <div class="tier-row"><div class="tier-badge tier-general">一般 General</div><div class="tier-text">精品、論壇活動紀錄（酒商、車商、TEDx Talk）。<br/><span class="en">Luxury brands &amp; forum event coverage — wine, automotive, TED-style talks, trade associations.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-ideal">理想 Ideal</div><div class="tier-text">品牌顧問、行銷顧問。<br/><span class="en">Brand consultants and marketing consultants who need video production partners for client campaigns.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-dream">夢幻 Dream</div><div class="tier-text">醫美 / 診所行銷廠商、製作大量訪談的工協會。<br/><span class="en">Medical aesthetic clinic marketing agencies and industry associations producing large-volume interview series.</span></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 7: MASON JIANG ─── -->
+    <!-- PROFILE: MASON -->
     <section class="slide slide-dark" id="slide-mason">
       <div class="slide-inner profile-layout">
         <div class="profile-left">
           <div class="profile-number">#115</div>
-          <!-- PHOTO SLOT mason: 請將照片命名為 mason.jpg 放入專案資料夾 -->
-          <div class="profile-photo-wrap">
-            <div class="profile-avatar pav-orange" id="photo-mason">MJ</div>
-          </div>
+          <div class="profile-photo-wrap"><div class="profile-avatar pav-orange" id="photo-mason">MJ</div></div>
           <div class="profile-name">江緯達 <span class="profile-name-en">Mason Jiang</span></div>
           <div class="profile-role">品牌導客<br/><span class="en">Brand Lead Gen &amp; Group Buying</span></div>
           <div class="profile-company">精實國際行銷 GS Marketing</div>
-          <div class="profile-clients">
-            <div class="clients-label">渠道規模 Channel Scale</div>
-            <div class="client-tags">
-              <span>1,000+ 團媽 KOLs</span>
-              <span>單日12萬顆</span>
-              <span>年破億台幣</span>
-              <span>7-Eleven 通路</span>
-            </div>
-          </div>
+          <div class="profile-clients"><div class="clients-label">渠道規模 Channel Scale</div><div class="client-tags"><span>1,000+ 團媽 KOLs</span><span>單日12萬顆</span><span>年破億台幣</span><span>7-Eleven 通路</span></div></div>
         </div>
         <div class="profile-right">
           <div class="slide-tag">07 · 會員檔案 MEMBER PROFILE</div>
           <h2 class="slide-title sm">GS Marketing 精實國際</h2>
           <p class="profile-tagline">台灣最大私域團購生態系，把好產品變成現象級爆款。<br/><span class="en">Taiwan's largest private group-buying ecosystem — turning great products into viral bestsellers.</span></p>
-
           <div class="profile-highlights">
-            <div class="highlight-item" id="ph-m1">
-              <div class="hi-icon">💆</div>
-              <div>
-                <strong>高階導客 <span class="hl-en">Medical Aesthetics Lead Gen</span></strong>
-                <p>醫美導客每月 500+ 進站訊息，每月新增 100+ 位實體新客。<br/><span class="en">500+ inbound consultation messages/month · 100+ new physical walk-in clients/month.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-m2">
-              <div class="hi-icon">🥟</div>
-              <div>
-                <strong>爆款銷售機器 <span class="hl-en">Viral Sales Machine</span></strong>
-                <p>大阪王將煎餃：每月 1,500 萬顆，年採購超 3,000 萬台幣。山田村一三明治：7-11 店長團購單日狂銷 12 萬顆。<br/><span class="en">Japanese Gyoza: 15M pieces/month, NT$30M+ annual. Yamada-Mura sandwich via 7-Eleven: 120,000 units in one day.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-m3">
-              <div class="hi-icon">🌐</div>
-              <div>
-                <strong>一條龍進口管道 <span class="hl-en">End-to-End Import Pipeline</span></strong>
-                <p>進口→清關→倉儲→出貨→團購啟動→數據分析，全程包辦。<br/><span class="en">Import → customs → warehousing → fulfillment → group-buy activation → analytics, all in one.</span></p>
-              </div>
-            </div>
+            <div class="highlight-item"><div class="hi-icon">💆</div><div><strong>高階導客 <span class="hl-en">Medical Aesthetics Lead Gen</span></strong><p>醫美導客每月 500+ 進站訊息，每月新增 100+ 位實體新客。<br/><span class="en">500+ inbound consultation messages/month · 100+ new physical walk-in clients/month.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">🥟</div><div><strong>爆款銷售機器 <span class="hl-en">Viral Sales Machine</span></strong><p>大阪王將煎餃：每月 1,500 萬顆，年採購超 3,000 萬台幣。山田村一三明治：7-11 單日狂銷 12 萬顆。<br/><span class="en">Japanese Gyoza: 15M pieces/month. Yamada-Mura sandwich via 7-Eleven: 120,000 units in one day.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">🌐</div><div><strong>一條龍進口管道 <span class="hl-en">End-to-End Import Pipeline</span></strong><p>進口→清關→倉儲→出貨→團購啟動→數據分析，全程包辦。<br/><span class="en">Import → customs → warehousing → fulfillment → group-buy activation → analytics, all in one.</span></p></div></div>
           </div>
-
-          <div class="tier-box">
-            <div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
-            <div class="tier-row" id="tr-m1">
-              <div class="tier-badge tier-general">一般 General</div>
-              <div class="tier-text">品牌主 / 總代理商 / 日韓進口品牌，尋求台灣市場切入點。<br/><span class="en">Brand owners, exclusive distributors, Japanese &amp; Korean imported brands seeking Taiwan market entry.</span></div>
-            </div>
-            <div class="tier-row" id="tr-m2">
-              <div class="tier-badge tier-ideal">理想 Ideal</div>
-              <div class="tier-text">部落客 / 團媽 / 社區團購主 / 眼科 / 牙醫 / 醫美診所。<br/><span class="en">Bloggers, group-buy leaders, community coordinators, optical / dental / aesthetic clinics.</span></div>
-            </div>
-            <div class="tier-row" id="tr-m3">
-              <div class="tier-badge tier-dream">夢幻 Dream</div>
-              <div class="tier-text">海外品牌經銷商，需要全方位台灣市場滲透服務。<br/><span class="en">Overseas brand distributors seeking full-service Taiwan market penetration.</span></div>
-            </div>
+          <div class="tier-box"><div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
+            <div class="tier-row"><div class="tier-badge tier-general">一般 General</div><div class="tier-text">品牌主 / 總代理商 / 日韓進口品牌，尋求台灣市場切入點。<br/><span class="en">Brand owners, exclusive distributors, Japanese &amp; Korean imported brands seeking Taiwan market entry.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-ideal">理想 Ideal</div><div class="tier-text">部落客 / 團媽 / 社區團購主 / 眼科 / 牙醫 / 醫美診所。<br/><span class="en">Bloggers, group-buy leaders, community coordinators, optical / dental / aesthetic clinics.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-dream">夢幻 Dream</div><div class="tier-text">海外品牌經銷商，需要全方位台灣市場滲透服務。<br/><span class="en">Overseas brand distributors seeking full-service Taiwan market penetration.</span></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 8: TERRY HSIEH ─── -->
+    <!-- PROFILE: TERRY -->
     <section class="slide" id="slide-terry">
       <div class="slide-inner profile-layout">
         <div class="profile-left">
           <div class="profile-number">#186</div>
-          <!-- PHOTO SLOT terry: 請將照片命名為 terry.jpg 放入專案資料夾 -->
-          <div class="profile-photo-wrap">
-            <div class="profile-avatar pav-purple" id="photo-terry">TH</div>
-          </div>
+          <div class="profile-photo-wrap"><div class="profile-avatar pav-purple" id="photo-terry">TH</div></div>
           <div class="profile-name">謝小涵 <span class="profile-name-en">Terry Hsieh</span></div>
           <div class="profile-role">品牌策略顧問<br/><span class="en">Brand Strategy Consulting</span></div>
           <div class="profile-company">TSG 特里創意有限公司</div>
-          <div class="profile-clients">
-            <div class="clients-label">代表客戶 Key Clients</div>
-            <div class="client-tags">
-              <span>中華電信 Chunghwa Telecom</span>
-              <span>Oral-B</span>
-              <span>格蘭英語 Gram English</span>
-            </div>
-          </div>
+          <div class="profile-clients"><div class="clients-label">代表客戶 Key Clients</div><div class="client-tags"><span>中華電信 Chunghwa Telecom</span><span>Oral-B</span><span>格蘭英語 Gram English</span></div></div>
         </div>
         <div class="profile-right">
           <div class="slide-tag">08 · 會員檔案 MEMBER PROFILE</div>
           <h2 class="slide-title sm">Terry Strategy Group</h2>
           <p class="profile-tagline">從混亂到順流——打造可複製的品牌系統，讓企業不需要老闆就能成長。<br/><span class="en">From chaos to clarity — building replicable brand systems that let businesses grow without the founder.</span></p>
-
           <div class="profile-highlights">
-            <div class="highlight-item" id="ph-t1">
-              <div class="hi-icon">♟️</div>
-              <div>
-                <strong>品牌即作業系統 <span class="hl-en">Brand as an Operating System</span></strong>
-                <p>將零散的產品線與不清楚的定位，整合成全公司都能執行的一套品牌系統。<br/><span class="en">Transforms fragmented product lines into a coherent, scalable brand system that anyone in the company can execute.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-t2">
-              <div class="hi-icon">📖</div>
-              <div>
-                <strong>轉化力強的品牌故事 <span class="hl-en">Storytelling that Converts</span></strong>
-                <p>把老闆講不清楚的複雜案子，說成客戶願意買單的精彩品牌故事。<br/><span class="en">Translates complex, hard-to-explain businesses into compelling brand narratives that clients genuinely want to buy into.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-t3">
-              <div class="hi-icon">🔭</div>
-              <div>
-                <strong>全盤棋局觀 <span class="hl-en">Full-Board View</span></strong>
-                <p>從頂層戰略、商業模式到品牌定位與行銷節奏，一次看完整盤，而非單一廣告專案。<br/><span class="en">Top-level strategy → business model → brand positioning → marketing cadence — all in one integrated engagement.</span></p>
-              </div>
-            </div>
+            <div class="highlight-item"><div class="hi-icon">♟️</div><div><strong>品牌即作業系統 <span class="hl-en">Brand as an Operating System</span></strong><p>將零散的產品線與不清楚的定位，整合成全公司都能執行的一套品牌系統。<br/><span class="en">Transforms fragmented product lines into a coherent, scalable brand system that anyone can execute.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">📖</div><div><strong>轉化力強的品牌故事 <span class="hl-en">Storytelling that Converts</span></strong><p>把老闆講不清楚的複雜案子，說成客戶願意買單的精彩品牌故事。<br/><span class="en">Translates complex businesses into compelling brand narratives that clients genuinely want to buy into.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">🔭</div><div><strong>全盤棋局觀 <span class="hl-en">Full-Board View</span></strong><p>從頂層戰略、商業模式到品牌定位與行銷節奏，一次看完整盤，而非單一廣告專案。<br/><span class="en">Top-level strategy → business model → brand positioning → marketing cadence — all in one integrated engagement.</span></p></div></div>
           </div>
-
-          <blockquote class="profile-quote">
-            「顧問賣的不是時間，而是一套從混亂走向清楚的路徑。當解題路徑被看見，客戶才會真正感受到價值。」<br/>
-            <span class="quote-en">"A consultant doesn't sell time — they sell a pathway from confusion to clarity. Only when that pathway becomes visible does the client truly feel the value."</span>
-          </blockquote>
-
-          <div class="tier-box">
-            <div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
-            <div class="tier-row" id="tr-t1">
-              <div class="tier-badge tier-general">一般 General</div>
-              <div class="tier-text">品牌方向不清楚的高成長新創公司。<br/><span class="en">High-growth startups with strong product-market fit but unclear brand direction.</span></div>
-            </div>
-            <div class="tier-row" id="tr-t2">
-              <div class="tier-badge tier-ideal">理想 Ideal</div>
-              <div class="tier-text">年營業額 3-10 億（$10M–$33M USD）的企業主，尋求可擴展的品牌架構。<br/><span class="en">Business owners with annual revenues $10M–$33M USD seeking scalable brand architecture.</span></div>
-            </div>
-            <div class="tier-row" id="tr-t3">
-              <div class="tier-badge tier-dream">夢幻 Dream</div>
-              <div class="tier-text">多品牌集團與二代接班企業，進行品牌整體轉型。<br/><span class="en">Multi-brand enterprise conglomerates and 2nd-generation successors undergoing brand transformation.</span></div>
-            </div>
+          <blockquote class="profile-quote">「顧問賣的不是時間，而是一套從混亂走向清楚的路徑。當解題路徑被看見，客戶才會真正感受到價值。」<br/><span class="quote-en">"A consultant doesn't sell time — they sell a pathway from confusion to clarity. Only when that pathway becomes visible does the client truly feel the value."</span></blockquote>
+          <div class="tier-box"><div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
+            <div class="tier-row"><div class="tier-badge tier-general">一般 General</div><div class="tier-text">品牌方向不清楚的高成長新創公司。<br/><span class="en">High-growth startups with strong product-market fit but unclear brand direction.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-ideal">理想 Ideal</div><div class="tier-text">年營業額 3-10 億（$10M–$33M USD）的企業主，尋求可擴展的品牌架構。<br/><span class="en">Business owners with annual revenues $10M–$33M USD seeking scalable brand architecture.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-dream">夢幻 Dream</div><div class="tier-text">多品牌集團與二代接班企業，進行品牌整體轉型。<br/><span class="en">Multi-brand enterprise conglomerates and 2nd-generation successors undergoing brand transformation.</span></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 9: SAGE HUANG ─── -->
+    <!-- PROFILE: SAGE -->
     <section class="slide slide-dark" id="slide-sage">
       <div class="slide-inner profile-layout">
         <div class="profile-left">
           <div class="profile-number">#216</div>
-          <!-- PHOTO SLOT sage: 請將照片命名為 sage.jpg 放入專案資料夾 -->
-          <div class="profile-photo-wrap">
-            <div class="profile-avatar pav-pink" id="photo-sage">SH</div>
-          </div>
+          <div class="profile-photo-wrap"><div class="profile-avatar pav-pink" id="photo-sage">SH</div></div>
           <div class="profile-name">黃湍晏 <span class="profile-name-en">Sage Huang</span></div>
           <div class="profile-role">企業形象設計<br/><span class="en">Corporate Visual Identity &amp; Design</span></div>
           <div class="profile-company">SEAN 藝術設計聯合工作中心</div>
-          <div class="profile-clients">
-            <div class="clients-label">代表客戶 Key Clients</div>
-            <div class="client-tags">
-              <span>國立故宮博物院</span>
-              <span>聯廣集團</span>
-              <span>MILAS 安心超市</span>
-              <span>威士忌坊</span>
-            </div>
-          </div>
+          <div class="profile-clients"><div class="clients-label">代表客戶 Key Clients</div><div class="client-tags"><span>國立故宮博物院</span><span>聯廣集團</span><span>MILAS 安心超市</span><span>威士忌坊</span></div></div>
         </div>
         <div class="profile-right">
           <div class="slide-tag">09 · 會員檔案 MEMBER PROFILE</div>
           <h2 class="slide-title sm">Sean Art Designer</h2>
           <p class="profile-tagline">品牌識別遇上藝術工藝——從國立故宮博物院到你的下一個產品發布。<br/><span class="en">Where brand identity meets artistic craft — from the National Palace Museum to your next product launch.</span></p>
-
           <div class="profile-highlights">
-            <div class="highlight-item" id="ph-s1">
-              <div class="hi-icon">🎨</div>
-              <div>
-                <strong>品牌設計 <span class="hl-en">Brand Design</span></strong>
-                <p>LOGO 設計及塑造品牌形象，含文具、周邊與環境視覺設計。<br/><span class="en">Logo design and full brand identity system including stationery, merchandise, and environmental branding.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-s2">
-              <div class="hi-icon">📦</div>
-              <div>
-                <strong>廣告與包裝 <span class="hl-en">Advertising &amp; Packaging</span></strong>
-                <p>主視覺設計（KV）、海報、Banner、社群素材與商品外觀結構包裝設計。<br/><span class="en">Key visual (KV) · Posters · Banners · Social media assets · 3D product packaging structure design.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-s3">
-              <div class="hi-icon">▶️</div>
-              <div>
-                <strong>動態圖像設計 <span class="hl-en">Motion Graphics Design</span></strong>
-                <p>動態 LOGO、片頭字幕、影片視覺特效設計。<br/><span class="en">Animated logos · Title cards &amp; lower thirds · Visual effects for brand films and digital screens.</span></p>
-              </div>
-            </div>
+            <div class="highlight-item"><div class="hi-icon">🎨</div><div><strong>品牌設計 <span class="hl-en">Brand Design</span></strong><p>LOGO 設計及塑造品牌形象，含文具、周邊與環境視覺設計。<br/><span class="en">Logo design and full brand identity system including stationery, merchandise, and environmental branding.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">📦</div><div><strong>廣告與包裝 <span class="hl-en">Advertising &amp; Packaging</span></strong><p>主視覺設計（KV）、海報、Banner、社群素材與商品外觀結構包裝設計。<br/><span class="en">Key visual (KV) · Posters · Banners · Social media assets · 3D product packaging structure design.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">▶️</div><div><strong>動態圖像設計 <span class="hl-en">Motion Graphics Design</span></strong><p>動態 LOGO、片頭字幕、影片視覺特效設計。<br/><span class="en">Animated logos · Title cards &amp; lower thirds · Visual effects for brand films and digital screens.</span></p></div></div>
           </div>
-
-          <div class="owned-brands">
-            <div class="ob-label">自有品牌組合 Owned Brand Portfolio</div>
-            <div class="ob-list">
-              <div class="ob-item" id="ob-1">
-                <span class="ob-icon">🧸</span>
-                <div><strong>妞妞十選 Niou Niou Select</strong> — 玩具 YouTuber 選物電商平台<br/><span class="en">Toy YouTuber e-commerce curation platform</span></div>
-              </div>
-              <div class="ob-item" id="ob-2">
-                <span class="ob-icon">👓</span>
-                <div><strong>光明分子 Bright Molecule</strong> — 精品眼鏡代理<br/><span class="en">Premium luxury eyewear distributor</span></div>
-              </div>
-              <div class="ob-item" id="ob-3">
-                <span class="ob-icon">🌍</span>
-                <div><strong>EGO</strong> — 全球定位護照套品牌<br/><span class="en">Global GPS tracking passport holder brand</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tier-box">
-            <div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
-            <div class="tier-row" id="tr-s1">
-              <div class="tier-badge tier-general">一般 General</div>
-              <div class="tier-text">新創品牌（有 LOGO、名片設計需求），預算從 NT$30K 起。<br/><span class="en">Startup brands needing Logo and business card design — from NT$30K (~$1K USD).</span></div>
-            </div>
-            <div class="tier-row" id="tr-s2">
-              <div class="tier-badge tier-ideal">理想 Ideal</div>
-              <div class="tier-text">有意願提升品牌形象（預算 10–30 萬），持續更新企業週邊設計。<br/><span class="en">Companies upgrading brand image with a $3K–$10K USD budget for full VI system &amp; ongoing design updates.</span></div>
-            </div>
-            <div class="tier-row" id="tr-s3">
-              <div class="tier-badge tier-dream">夢幻 Dream</div>
-              <div class="tier-text">中大型企業商標與後續設計年度合約。<br/><span class="en">Medium-to-large enterprises needing trademark registration + annual retainer VI design services.</span></div>
-            </div>
+          <div class="owned-brands"><div class="ob-label">自有品牌組合 Owned Brand Portfolio</div><div class="ob-list"><div class="ob-item"><span class="ob-icon">🧸</span><div><strong>妞妞十選 Niou Niou Select</strong> — 玩具 YouTuber 選物電商平台<br/><span class="en">Toy YouTuber e-commerce curation platform</span></div></div><div class="ob-item"><span class="ob-icon">👓</span><div><strong>光明分子 Bright Molecule</strong> — 精品眼鏡代理<br/><span class="en">Premium luxury eyewear distributor</span></div></div><div class="ob-item"><span class="ob-icon">🌍</span><div><strong>EGO</strong> — 全球定位護照套品牌<br/><span class="en">Global GPS tracking passport holder brand</span></div></div></div></div>
+          <div class="tier-box"><div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
+            <div class="tier-row"><div class="tier-badge tier-general">一般 General</div><div class="tier-text">新創品牌（有 LOGO、名片設計需求），預算從 NT$30K 起。<br/><span class="en">Startup brands needing Logo and business card design — from NT$30K (~$1K USD).</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-ideal">理想 Ideal</div><div class="tier-text">有意願提升品牌形象（預算 10–30 萬），持續更新企業週邊設計。<br/><span class="en">Companies upgrading brand image with a $3K–$10K USD budget for full VI system &amp; ongoing design updates.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-dream">夢幻 Dream</div><div class="tier-text">中大型企業商標與後續設計年度合約。<br/><span class="en">Medium-to-large enterprises needing trademark registration + annual retainer VI design services.</span></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 10: SHOW WU ─── -->
+    <!-- PROFILE: SHOW -->
     <section class="slide" id="slide-show">
       <div class="slide-inner profile-layout">
         <div class="profile-left">
           <div class="profile-number">#226</div>
-          <!-- PHOTO SLOT show: 請將照片命名為 show.jpg 放入專案資料夾 -->
-          <div class="profile-photo-wrap">
-            <div class="profile-avatar pav-teal" id="photo-show">SW</div>
-          </div>
+          <div class="profile-photo-wrap"><div class="profile-avatar pav-teal" id="photo-show">SW</div></div>
           <div class="profile-name">巫秀陽 <span class="profile-name-en">Show Wu</span></div>
           <div class="profile-role">企業影音 IP 打造培訓<br/><span class="en">Corporate Video IP Creation &amp; Training</span></div>
           <div class="profile-company">老巫翻新有限公司 Laowu514</div>
-          <div class="profile-clients">
-            <div class="clients-label">品牌合作夥伴 Brand Partners</div>
-            <div class="client-tags">
-              <span>Coca-Cola</span><span>HTC</span><span>ASUS</span>
-              <span>LINE</span><span>微風百貨 Breeze</span><span>鈊象 IGS</span>
-            </div>
-          </div>
+          <div class="profile-clients"><div class="clients-label">品牌合作夥伴 Brand Partners</div><div class="client-tags"><span>Coca-Cola</span><span>HTC</span><span>ASUS</span><span>LINE</span><span>微風百貨 Breeze</span><span>鈊象 IGS</span></div></div>
         </div>
         <div class="profile-right">
           <div class="slide-tag">10 · 會員檔案 MEMBER PROFILE</div>
           <h2 class="slide-title sm">老巫翻新 Laowu514</h2>
           <p class="profile-tagline">金鐘獎得主節目製作人，協助企業從內部打造屬於自己的爆款影音 IP。<br/><span class="en">Golden Bell Award–winning TV producer helping corporations build their own viral video IP from the inside out.</span></p>
-
           <div class="profile-highlights">
-            <div class="highlight-item" id="ph-w1">
-              <div class="hi-icon">🏆</div>
-              <div>
-                <strong>金鐘獎得主 <span class="hl-en">Golden Bell Award Winner</span></strong>
-                <p>以現象級節目《全民最大黨》獲頒台灣電視最高榮譽「金鐘獎最佳綜藝節目獎」。<br/><span class="en">Awarded Taiwan's highest television honor for producing the nation's most-watched political satire program.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-w2">
-              <div class="hi-icon">✈️</div>
-              <div>
-                <strong>百萬粉絲 · 破 2 億觀看 <span class="hl-en">1M Fans · 200M+ Views</span></strong>
-                <p>創立社群粉專《空姐忙什麼》，累計 100 萬粉絲、破 2 億次點擊觀看！<br/><span class="en">Founded "What Are Flight Attendants Up To?" — accumulating 1M followers and over 200M total views.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-w3">
-              <div class="hi-icon">🏫</div>
-              <div>
-                <strong>企業數位轉型培訓 <span class="hl-en">Corporate Transformation Training</span></strong>
-                <p>短影音 IP 打造 · 募資簡報製作 · 心智圖工作坊，讓企業建立自己的影音部隊。<br/><span class="en">Short-Video IP Creation · Fundraising Pitch Decks · Mind Mapping Workshops for corporate video teams.</span></p>
-              </div>
-            </div>
+            <div class="highlight-item"><div class="hi-icon">🏆</div><div><strong>金鐘獎得主 <span class="hl-en">Golden Bell Award Winner</span></strong><p>以現象級節目《全民最大黨》獲頒台灣電視最高榮譽「金鐘獎最佳綜藝節目獎」。<br/><span class="en">Awarded Taiwan's highest television honor for producing the nation's most-watched political satire program.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">✈️</div><div><strong>百萬粉絲 · 破 2 億觀看 <span class="hl-en">1M Fans · 200M+ Views</span></strong><p>創立社群粉專《空姐忙什麼》，累計 100 萬粉絲、破 2 億次點擊觀看！<br/><span class="en">Founded "What Are Flight Attendants Up To?" — 1M followers and over 200M total views.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">🏫</div><div><strong>企業數位轉型培訓 <span class="hl-en">Corporate Transformation Training</span></strong><p>短影音 IP 打造 · 募資簡報製作 · 心智圖工作坊，讓企業建立自己的影音部隊。<br/><span class="en">Short-Video IP Creation · Fundraising Pitch Decks · Mind Mapping Workshops for corporate video teams.</span></p></div></div>
           </div>
-
-          <div class="tier-box">
-            <div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
-            <div class="tier-row" id="tr-w1">
-              <div class="tier-badge tier-general">一般 General</div>
-              <div class="tier-text">各中小企業影音 IP 打造教育訓練。<br/><span class="en">SMEs seeking video IP creation &amp; corporate training programs for marketing or sales teams.</span></div>
-            </div>
-            <div class="tier-row" id="tr-w2">
-              <div class="tier-badge tier-ideal">理想 Ideal</div>
-              <div class="tier-text">上市櫃公司影音 IP 打造教育訓練。<br/><span class="en">Publicly listed TWSE / TPEx companies seeking professional employee video content training at scale.</span></div>
-            </div>
-            <div class="tier-row" id="tr-w3">
-              <div class="tier-badge tier-dream">夢幻 Dream</div>
-              <div class="tier-text">商業周刊商周學院－課程專任講師合作。<br/><span class="en">Dedicated resident instructor for Business Weekly Academy full-curriculum partnership.</span></div>
-            </div>
+          <div class="tier-box"><div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
+            <div class="tier-row"><div class="tier-badge tier-general">一般 General</div><div class="tier-text">各中小企業影音 IP 打造教育訓練。<br/><span class="en">SMEs seeking video IP creation &amp; corporate training programs for marketing or sales teams.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-ideal">理想 Ideal</div><div class="tier-text">上市櫃公司影音 IP 打造教育訓練。<br/><span class="en">Publicly listed TWSE / TPEx companies seeking professional employee video content training at scale.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-dream">夢幻 Dream</div><div class="tier-text">商業周刊商周學院－課程專任講師合作。<br/><span class="en">Dedicated resident instructor for Business Weekly Academy full-curriculum partnership.</span></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── SLIDE 11: FEI LIN ─── -->
+    <!-- PROFILE: FEI -->
     <section class="slide slide-dark" id="slide-fei">
       <div class="slide-inner profile-layout">
         <div class="profile-left">
           <div class="profile-number">#278</div>
-          <!-- PHOTO SLOT fei: 請將照片命名為 fei.jpg 放入專案資料夾 -->
-          <div class="profile-photo-wrap">
-            <div class="profile-avatar pav-red" id="photo-fei">FL</div>
-          </div>
+          <div class="profile-photo-wrap"><div class="profile-avatar pav-red" id="photo-fei">FL</div></div>
           <div class="profile-name">林家榆 <span class="profile-name-en">Fei Lin</span></div>
           <div class="profile-role">商業攝影<br/><span class="en">Commercial Photography</span></div>
           <div class="profile-company">FEIFOTO Studio</div>
-          <div class="profile-clients">
-            <div class="clients-label">品牌與合作藝人 Clients &amp; Celebrities</div>
-            <div class="client-tags">
-              <span>Nike</span><span>Adidas</span><span>中國李寧 Li-Ning</span>
-              <span>王心凌 Cyndi Wang</span><span>彭于晏 Eddie Peng</span>
-              <span>劉亦菲 Liu Yifei</span><span>張鈞甯 Janine Chang</span>
-            </div>
-          </div>
+          <div class="profile-clients"><div class="clients-label">品牌與合作藝人 Clients &amp; Celebrities</div><div class="client-tags"><span>Nike</span><span>Adidas</span><span>中國李寧 Li-Ning</span><span>王心凌 Cyndi Wang</span><span>彭于晏 Eddie Peng</span><span>劉亦菲 Liu Yifei</span><span>張鈞甯 Janine Chang</span></div></div>
         </div>
         <div class="profile-right">
           <div class="slide-tag">11 · 會員檔案 MEMBER PROFILE</div>
           <h2 class="slide-title sm">FEIFOTO Studio</h2>
           <p class="profile-tagline">國際運動大牌與頂級藝人御用攝影，結合傳統工藝與前沿 AI 影像技術。<br/><span class="en">Where global sports giants meet A-list celebrities — premium commercial photography powered by traditional mastery and cutting-edge AI.</span></p>
-
           <div class="profile-highlights">
-            <div class="highlight-item" id="ph-f1">
-              <div class="hi-icon">👗</div>
-              <div>
-                <strong>服裝與商品攝影 <span class="hl-en">Fashion &amp; Product Photography</span></strong>
-                <p>廣告商品拍攝、電商精修圖及後期；專業模特兒 Lookbook（含實景置景 / 外景 / 白底去背）。<br/><span class="en">Commercial ad shoots · E-commerce precision retouching · Professional model lookbooks — studio / real-location / white-background.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-f2">
-              <div class="hi-icon">⭐</div>
-              <div>
-                <strong>藝人 &amp; 球員肖像攝影 <span class="hl-en">Celebrity &amp; Athlete Portraits</span></strong>
-                <p>藝人 / 球員 / 歌手 / KOL / 企業家高規格商業肖像照。<br/><span class="en">High-spec commercial portraits for entertainers, athletes, singers, KOLs, and C-suite executives.</span></p>
-              </div>
-            </div>
-            <div class="highlight-item" id="ph-f3">
-              <div class="hi-icon">🤖</div>
-              <div>
-                <strong>AI 前沿攝影 <span class="hl-en">AI-Enhanced Photography</span></strong>
-                <p>結合傳統頂級攝影工藝與最新 AI 圖像生成合成技術，創造過去無法實現的視覺效果。<br/><span class="en">Blending traditional top-tier photography with the latest AI image synthesis — for visuals that were previously impossible.</span></p>
-              </div>
-            </div>
+            <div class="highlight-item"><div class="hi-icon">👗</div><div><strong>服裝與商品攝影 <span class="hl-en">Fashion &amp; Product Photography</span></strong><p>廣告商品拍攝、電商精修圖及後期；專業模特兒 Lookbook（含實景置景 / 外景 / 白底去背）。<br/><span class="en">Commercial ad shoots · E-commerce precision retouching · Professional model lookbooks — studio / real-location / white-background.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">⭐</div><div><strong>藝人 &amp; 球員肖像攝影 <span class="hl-en">Celebrity &amp; Athlete Portraits</span></strong><p>藝人 / 球員 / 歌手 / KOL / 企業家高規格商業肖像照。<br/><span class="en">High-spec commercial portraits for entertainers, athletes, singers, KOLs, and C-suite executives.</span></p></div></div>
+            <div class="highlight-item"><div class="hi-icon">🤖</div><div><strong>AI 前沿攝影 <span class="hl-en">AI-Enhanced Photography</span></strong><p>結合傳統頂級攝影工藝與最新 AI 圖像生成合成技術，創造過去無法實現的視覺效果。<br/><span class="en">Blending traditional top-tier photography with the latest AI image synthesis — for visuals that were previously impossible.</span></p></div></div>
           </div>
-
-          <div class="tier-box">
-            <div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
-            <div class="tier-row" id="tr-f1">
-              <div class="tier-badge tier-general">一般 General</div>
-              <div class="tier-text">想進行視覺轉型與美學升級的品牌——商品、服裝或企業識別攝影。<br/><span class="en">Brands seeking a visual rebranding or aesthetic upgrade — product, fashion, or corporate identity photography.</span></div>
-            </div>
-            <div class="tier-row" id="tr-f2">
-              <div class="tier-badge tier-ideal">理想 Ideal</div>
-              <div class="tier-text">廣告公司及公關公司，需要可靠的高端攝影製作夥伴。<br/><span class="en">Advertising agencies and PR agencies that need a reliable, premium photography production partner.</span></div>
-            </div>
-            <div class="tier-row" id="tr-f3">
-              <div class="tier-badge tier-dream">夢幻 Dream</div>
-              <div class="tier-text">國際型品牌、國際型廣告 4A 公司。<br/><span class="en">Global international brands and top-tier 4A international advertising agencies.</span></div>
-            </div>
+          <div class="tier-box"><div class="tier-title">三層引薦架構 · 3-Tier Referral Architecture</div>
+            <div class="tier-row"><div class="tier-badge tier-general">一般 General</div><div class="tier-text">想進行視覺轉型與美學升級的品牌——商品、服裝或企業識別攝影。<br/><span class="en">Brands seeking a visual rebranding or aesthetic upgrade — product, fashion, or corporate identity photography.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-ideal">理想 Ideal</div><div class="tier-text">廣告公司及公關公司，需要可靠的高端攝影製作夥伴。<br/><span class="en">Advertising agencies and PR agencies that need a reliable, premium photography production partner.</span></div></div>
+            <div class="tier-row"><div class="tier-badge tier-dream">夢幻 Dream</div><div class="tier-text">國際型品牌、國際型廣告 4A 公司。<br/><span class="en">Global international brands and top-tier 4A international advertising agencies.</span></div></div>
           </div>
         </div>
       </div>
@@ -1154,12 +544,109 @@
 
   </main>
 
-  <!-- Progress bar -->
   <div class="progress-bar" id="progressBar"></div>
-
-  <!-- Scroll to top -->
   <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
 
-  <script src="script.js"></script>
+<script>
+(function(){
+  'use strict';
+
+  /* ── Photo injection (photos/[name].jpg) ── */
+  const MEMBERS=['patrick','jiajun','mason','terry','sage','show','fei'];
+  const EXTS=['jpg','jpeg','png','webp'];
+  function tryPhoto(id){
+    const exts=[...EXTS];
+    function next(){if(!exts.length)return;const ext=exts.shift();const src='photos/'+id+'.'+ext;const img=new Image();img.onload=()=>apply(id,src);img.onerror=next;img.src=src;}
+    next();
+  }
+  function apply(id,src){
+    const tag='<img src="'+src+'" alt="'+id+'" style="width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:inherit"/>';
+    const p=document.getElementById('photo-'+id);if(p){p.classList.add('has-photo');p.innerHTML=tag;}
+    document.querySelectorAll('.mc-avatar[data-member="'+id+'"],.ct-avatar[data-member="'+id+'"]').forEach(el=>{el.classList.add('has-photo');el.innerHTML=tag;});
+  }
+  MEMBERS.forEach(tryPhoto);
+
+  /* ── Sidebar & nav ── */
+  const sidebar=document.getElementById('sidebar');
+  const hamburger=document.getElementById('hamburger');
+  const mainContent=document.getElementById('mainContent');
+  const progressBar=document.getElementById('progressBar');
+  const scrollTopBtn=document.getElementById('scrollTop');
+  const navLinks=document.querySelectorAll('.nav-link');
+  const slides=document.querySelectorAll('.slide');
+
+  hamburger.addEventListener('click',()=>sidebar.classList.toggle('open'));
+  mainContent.addEventListener('click',()=>sidebar.classList.remove('open'));
+
+  navLinks.forEach(link=>{
+    link.addEventListener('click',e=>{
+      const href=link.getAttribute('href');
+      if(href&&href.startsWith('#')){e.preventDefault();const t=document.querySelector(href);if(t){t.scrollIntoView({behavior:'smooth',block:'start'});sidebar.classList.remove('open');}}
+    });
+  });
+
+  /* ── Active link ── */
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){const id=e.target.id;navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+id));}});
+  },{threshold:0.35});
+  slides.forEach(s=>io.observe(s));
+
+  /* ── Scroll progress & scroll-to-top ── */
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;
+    progressBar.style.setProperty('--progress',(h>0?(y/h*100).toFixed(1):0)+'%');
+    scrollTopBtn.classList.toggle('visible',y>400);
+  },{passive:true});
+  scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  /* ── Cover CTA ── */
+  const startBtn=document.getElementById('startBtn');
+  if(startBtn)startBtn.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById('slide-overview');if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});
+
+  /* ── Member card nav ── */
+  ['patrick','jiajun','mason','terry','sage','show','fei'].forEach(id=>{
+    const card=document.getElementById('oc-'+id);
+    if(card)card.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById('slide-'+id);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});
+  });
+
+  /* ── Matrix card color accents ── */
+  const colors=[['#6c63ff','#a78bfa'],['#3b82f6','#60a5fa'],['#f97316','#fb923c'],['#a855f7','#c084fc'],['#ec4899','#f472b6'],['#14b8a6','#2dd4bf'],['#22c55e','#4ade80']];
+  document.querySelectorAll('.matrix-card').forEach((card,i)=>{
+    const[c1,c2]=colors[i%colors.length];
+    const s=document.createElement('style');
+    s.textContent='#mx-'+(i+1)+'::after{background:linear-gradient(180deg,'+c1+','+c2+')}#mx-'+(i+1)+' .mx-refer strong{color:'+c1+'}#mx-'+(i+1)+' .mx-hook{border-left-color:'+c1+';background:linear-gradient(135deg,'+c1+'18,'+c2+'0a)}#mx-'+(i+1)+' .hook-label{color:'+c1+'}';
+    document.head.appendChild(s);
+  });
+
+  /* ── Target card colors ── */
+  const tgColors=['#6c63ff','#3b82f6','#f97316','#a855f7','#ec4899','#14b8a6','#22c55e'];
+  document.querySelectorAll('.target-card').forEach((card,i)=>{
+    const c=tgColors[i%tgColors.length];
+    card.querySelector('.tg-num').style.color=c;
+    const s=document.createElement('style');
+    s.textContent='#tg-'+(i+1)+':hover{border-color:'+c+'44;box-shadow:0 20px 60px '+c+'18}';
+    document.head.appendChild(s);
+  });
+
+  /* ── Entrance animations ── */
+  const animItems=document.querySelectorAll('.member-card,.matrix-card,.target-card,.highlight-item,.tier-row,.ob-item,tbody tr');
+  const animStyle=document.createElement('style');
+  animStyle.textContent='.anim-in{opacity:1!important;transform:translateY(0)!important}';
+  document.head.appendChild(animStyle);
+  const aio=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const siblings=Array.from(entry.target.parentElement.children);
+        entry.target.style.animationDelay=(siblings.indexOf(entry.target)*60)+'ms';
+        entry.target.classList.add('anim-in');
+        aio.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.1});
+  animItems.forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .45s ease,transform .45s ease';aio.observe(el);});
+
+  console.log('[BNI Huarong] Ready. Givers Gain® 🚀');
+})();
+</script>
 </body>
 </html>
